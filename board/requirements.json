@@ -25,6 +25,7 @@
   "derivation": {
     "method": "BRIEF.md was read and split; no design decision was taken. Every fixed_requirements entry, and every spec-table row sourced from the brief, carries a quotation that was checked by literal substring match against the brief bytes digested above. The build refuses to emit this file if any quotation is not found.",
     "quotations_verified": 28,
+    "where_the_quotations_are": "Every one of them is in this file: fixed_requirements[].brief_evidence and brief_spec_rows[].brief_evidence. The count above is the sum of those two lists, so it is recomputable from this repository alone - re-read BRIEF.md and check each string is a substring of it. brief_spec_rows carries the quotations behind the README's spec table, which would otherwise cite the brief with the evidence left in a build script.",
     "review": "two rounds of adversarial review against the brief, looking for invented requirements, lost requirements, evidence supporting a weaker claim than the one made beside it, and worksheet questions that presuppose their own answer"
   },
   "fixed_requirements": [
@@ -107,6 +108,68 @@
       "id": "REQ-16",
       "requirement": "The repository should remain a consumer of the shared PCBA_AutoDesignAndTest toolkit rather than accumulating board-specific logic in the toolkit.",
       "brief_evidence": "The repository should remain a consumer of the shared `PCBA_AutoDesignAndTest` toolkit rather than accumulating board-specific logic in the toolkit."
+    }
+  ],
+  "brief_spec_rows": [
+    {
+      "aspect": "Product function",
+      "value": "USB-C to 3.3 V UART debug adapter",
+      "brief_evidence": "Create a USB-C to 3.3 V UART debug adapter."
+    },
+    {
+      "aspect": "UART signalling level",
+      "value": "3.3 V",
+      "brief_evidence": "Create a USB-C to 3.3 V UART debug adapter. It must be a USB 2.0 Full-Speed device"
+    },
+    {
+      "aspect": "USB interface class",
+      "value": "USB 2.0 Full-Speed device",
+      "brief_evidence": "It must be a USB 2.0 Full-Speed device, bus-powered"
+    },
+    {
+      "aspect": "Power source",
+      "value": "Bus-powered (no separate supply input stated)",
+      "brief_evidence": "3.3 V UART debug adapter. It must be a USB 2.0 Full-Speed device, bus-powered"
+    },
+    {
+      "aspect": "Target-side signal set",
+      "value": "TX, RX, GND, 3V3 reference, plus RTS/CTS as an option",
+      "brief_evidence": "expose TX, RX, GND, 3V3 reference, and optional RTS/CTS on a 0.1-inch or compact locking header"
+    },
+    {
+      "aspect": "Target-side header style",
+      "value": "0.1-inch header or a compact locking header (the brief permits either; which one is not fixed)",
+      "brief_evidence": "optional RTS/CTS on a 0.1-inch or compact locking header."
+    },
+    {
+      "aspect": "USB-C CC network",
+      "value": "Correct device-side CC network required; no topology, value or tolerance stated",
+      "brief_evidence": "Include the correct USB-C device-side CC network"
+    },
+    {
+      "aspect": "ESD protection",
+      "value": "USB ESD protection, placed close to the connector",
+      "brief_evidence": "CC network, USB ESD protection close to the connector"
+    },
+    {
+      "aspect": "Decoupling",
+      "value": "Local decoupling required",
+      "brief_evidence": "USB ESD protection close to the connector, local decoupling"
+    },
+    {
+      "aspect": "Connector placement",
+      "value": "USB and target-side connectors clearly separated",
+      "brief_evidence": "local decoupling, and clearly separated USB and target-side connectors."
+    },
+    {
+      "aspect": "USB-UART bridge",
+      "value": "A commonly available bridge; no specific part named by the brief",
+      "brief_evidence": "Choose a commonly available USB-UART bridge."
+    },
+    {
+      "aspect": "D+/D- routing",
+      "value": "Deliberate differential pair; any impedance approximation must be documented",
+      "brief_evidence": "route D+/D- as a deliberate differential pair and document any impedance approximation."
     }
   ],
   "open_decisions": [

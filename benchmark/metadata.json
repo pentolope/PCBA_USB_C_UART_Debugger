@@ -1,0 +1,16 @@
+{
+  "repo": "PCBA_USB_C_UART_Debugger",
+  "title": "USB-C UART Debug Adapter",
+  "category": "high-speed-lite",
+  "difficulty": 2,
+  "detail": 3,
+  "layers": "2",
+  "stress": [
+    "USB 2.0 differential routing",
+    "ESD",
+    "USB-C CC resistors",
+    "small QFN"
+  ],
+  "benchmark_id": 5,
+  "brief_file": "BRIEF.md"
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "repo": "PCBA_USB_C_UART_Debugger",
+  "board_id": "usb_c_uart_debugger",
+  "benchmark_id": 5,
+  "title": "USB-C UART Debug Adapter",
+  "description": "The split between what BRIEF.md fixes and what it leaves open. Every fixed_requirements entry carries the verbatim brief text that substantiates it, bound to the recorded brief digest. An open_decisions entry is a choice for the design agent: record it in 'chosen' with 'rationale', and never move it into fixed_requirements. Missing details are design freedom, not permission to fabricate unstated user requirements.",
+  "brief": {
+    "path": "../BRIEF.md",
+    "sha256": "0c5897542317b8fdc90d1251febe01efa33c86589f59024910c426d053b9a461",
+    "authority": "supplied by the benchmark; authoritative; preserved byte for byte and never edited"
+  },
+  "metadata": {
+    "category": "high-speed-lite",
+    "difficulty": 2,
+    "detail": 3,
+    "layers": "2",
+    "stressors": [
+      "USB 2.0 differential routing",
+      "ESD",
+      "USB-C CC resistors",
+      "small QFN"
+    ]
+  },
+  "derivation": {
+    "method": "BRIEF.md was read and split; no design decision was taken. Every fixed_requirements entry, and every spec-table row sourced from the brief, carries a quotation that was checked by literal substring match against the brief bytes digested above. The build refuses to emit this file if any quotation is not found.",
+    "quotations_verified": 28,
+    "review": "two rounds of adversarial review against the brief, looking for invented requirements, lost requirements, evidence supporting a weaker claim than the one made beside it, and worksheet questions that presuppose their own answer"
+  },
+  "fixed_requirements": [
+    {
+      "id": "REQ-01",
+      "requirement": "The board is a USB-C to UART debug adapter operating at a 3.3 V UART level.",
+      "brief_evidence": "Create a USB-C to 3.3 V UART debug adapter."
+    },
+    {
+      "id": "REQ-02",
+      "requirement": "It must be a USB 2.0 Full-Speed device.",
+      "brief_evidence": "It must be a USB 2.0 Full-Speed device, bus-powered"
+    },
+    {
+      "id": "REQ-03",
+      "requirement": "It must be bus-powered; the brief names no other supply input.",
+      "brief_evidence": "3.3 V UART debug adapter. It must be a USB 2.0 Full-Speed device, bus-powered"
+    },
+    {
+      "id": "REQ-04",
+      "requirement": "The target-side header must expose TX, RX, GND and a 3V3 reference.",
+      "brief_evidence": "expose TX, RX, GND, 3V3 reference, and optional RTS/CTS on a 0.1-inch or compact locking header"
+    },
+    {
+      "id": "REQ-05",
+      "requirement": "RTS/CTS is optional, not required: the brief permits it on the target-side header alongside the mandatory signals, and a design that omits it is still compliant.",
+      "brief_evidence": "and optional RTS/CTS on a 0.1-inch or compact locking header."
+    },
+    {
+      "id": "REQ-06",
+      "requirement": "The target-side header must be either a 0.1-inch header or a compact locking header; the brief permits either.",
+      "brief_evidence": "optional RTS/CTS on a 0.1-inch or compact locking header."
+    },
+    {
+      "id": "REQ-07",
+      "requirement": "A correct USB-C device-side CC network must be included.",
+      "brief_evidence": "Include the correct USB-C device-side CC network"
+    },
+    {
+      "id": "REQ-08",
+      "requirement": "USB ESD protection must be included and physically placed close to the connector.",
+      "brief_evidence": "USB ESD protection close to the connector, local decoupling"
+    },
+    {
+      "id": "REQ-09",
+      "requirement": "Local decoupling must be provided.",
+      "brief_evidence": "local decoupling, and clearly separated USB and target-side connectors."
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "The USB connector and the target-side connector must be clearly separated on the board.",
+      "brief_evidence": "clearly separated USB and target-side connectors. Choose a commonly available USB-UART bridge."
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "The USB-UART bridge chosen must be a commonly available part.",
+      "brief_evidence": "Choose a commonly available USB-UART bridge."
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Two layers are preferred for the stackup; the brief states a preference, not a mandate.",
+      "brief_evidence": "Prefer two layers, but route D+/D- as a deliberate differential pair"
+    },
+    {
+      "id": "REQ-13",
+      "requirement": "D+/D- must be routed as a deliberate differential pair, not as two ordinary nets.",
+      "brief_evidence": "route D+/D- as a deliberate differential pair and document any impedance approximation."
+    },
+    {
+      "id": "REQ-14",
+      "requirement": "Any impedance approximation used for the differential pair must be documented.",
+      "brief_evidence": "as a deliberate differential pair and document any impedance approximation."
+    },
+    {
+      "id": "REQ-15",
+      "requirement": "Stated requirements are authoritative; open choices must be made and documented as engineering decisions rather than presented as user requirements.",
+      "brief_evidence": "Treat stated requirements as authoritative; where the brief leaves choices open, make and document reasonable engineering decisions rather than inventing hidden user requirements."
+    },
+    {
+      "id": "REQ-16",
+      "requirement": "The repository should remain a consumer of the shared PCBA_AutoDesignAndTest toolkit rather than accumulating board-specific logic in the toolkit.",
+      "brief_evidence": "The repository should remain a consumer of the shared `PCBA_AutoDesignAndTest` toolkit rather than accumulating board-specific logic in the toolkit."
+    }
+  ],
+  "open_decisions": [
+    {
+      "id": "OPEN-01",
+      "decision": "Which USB-UART bridge device to use.",
+      "why_open": "The brief requires only that the bridge be \"commonly available\" and names no manufacturer, part number or family.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-02",
+      "decision": "The bridge's package, and how its land pattern, thermal pad (if any) and assembly process are handled.",
+      "why_open": "The brief names no package. \"small QFN\" appears only in the benchmark header block and in metadata as a stressor, never in the design brief's requirements, so whether the chosen bridge is a QFN at all is a design outcome.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-03",
+      "decision": "Which USB-C receptacle to use — pin count, SMT versus through-hole, vertical/horizontal/mid-mount, retention scheme.",
+      "why_open": "The brief says \"USB-C\" and nothing about the receptacle variant or mounting style.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-04",
+      "decision": "The concrete implementation of the device-side CC network: what termination the USB Type-C specification requires for a device of this kind, on which pins, at what value and tolerance, and how both cable orientations are handled.",
+      "why_open": "The brief demands a \"correct\" CC network but states no values, tolerances or topology; correctness is defined by the USB Type-C specification, which the design must cite rather than assume.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-05",
+      "decision": "The ESD protection strategy: discrete devices versus an array, which nets are protected (D+/D-, VBUS, CC, target-side signals), and the target ESD immunity level.",
+      "why_open": "The brief requires \"USB ESD protection close to the connector\" but names no device, no protected-net list beyond USB, and no immunity level or test standard.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-06",
+      "decision": "How the 3.3 V rail and the 3V3 reference pin are generated — bridge internal regulator, external regulator, or otherwise.",
+      "why_open": "The brief fixes 3.3 V as the UART level and requires a 3V3 reference pin, but is silent on where that rail comes from.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-07",
+      "decision": "Whether the 3V3 pin may source current to the target, and if so what current limit, protection or fusing applies.",
+      "why_open": "The brief calls it a \"3V3 reference\" without specifying whether it is an output rail, and states no current budget.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-08",
+      "decision": "The VBUS input budget, the current level (if any) advertised to the source, and whether input protection (fuse, current limit, reverse protection, bulk capacitance) is included.",
+      "why_open": "The brief says only \"bus-powered\" and specifies no current draw, protection or advertised current level.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-09",
+      "decision": "The target header pinout, pin order, pin count and — if the compact locking option is taken — which connector family and pitch.",
+      "why_open": "The brief fixes the mandatory signal set and offers two header styles but does not choose between them, fix a pin order, or name a connector.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-10",
+      "decision": "Whether RTS/CTS is provided at all and, if it is, how its optionality is expressed: always-populated extra pins, do-not-populate parts, jumpers, or a build variant.",
+      "why_open": "The brief marks RTS/CTS optional without requiring it or saying what optionality means mechanically or electrically.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-11",
+      "decision": "Board outline, dimensions, mounting holes, and whether the board is a bare dongle, an inline adapter or an enclosed unit.",
+      "why_open": "The brief is silent on mechanical form beyond requiring that the two connectors be clearly separated.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-12",
+      "decision": "How much separation between the USB and target-side connectors counts as \"clearly separated\", and how that is justified.",
+      "why_open": "The brief states the requirement qualitatively and gives no distance, keepout or creepage figure.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-13",
+      "decision": "Whether to actually use two layers or depart from that preference, and the full stackup: copper weight, dielectric thickness, dielectric constant, finish.",
+      "why_open": "\"Prefer two layers\" is a preference, and the brief gives no stackup parameters; metadata's layer count is a likelihood, not a mandate.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-14",
+      "decision": "The differential impedance target for D+/D-, the method used to approximate it on the chosen stackup, and the trace geometry that follows.",
+      "why_open": "The brief requires a documented impedance approximation but states no target value, tolerance, or calculation method.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-15",
+      "decision": "The grounding strategy on whatever stackup is chosen — how continuous a reference the differential pair gets, and how that is traded against routing the rest of the board.",
+      "why_open": "The brief is silent on planes or return-path strategy; it follows only indirectly from the layer preference and the differential-pair requirement.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-16",
+      "decision": "Whether to include status/activity indication, additional broken-out control lines (for example a reset or bootloader line), test points, or bridge configuration such as descriptors and stored settings.",
+      "why_open": "The brief mentions none of these; adding them is allowed as design freedom but must not be presented as a user requirement.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-17",
+      "decision": "Fabricator and assembly process selection, and the capability limits (minimum trace/space, drill, annular ring, single- versus double-sided assembly) the layout must respect.",
+      "why_open": "The brief names no fabricator, process or capability set; \"commonly available\" constrains the bridge, not the process.",
+      "chosen": null,
+      "rationale": null
+    }
+  ]
+}

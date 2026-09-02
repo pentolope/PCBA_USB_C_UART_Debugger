@@ -1,0 +1,753 @@
+{
+  "parts": {
+    "0603WAF1001T5E": {
+      "land_pattern": {
+        "document": "res_0603_uniroyal",
+        "pad_count": 2
+      },
+      "resistor": {
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF1002T5E": {
+      "land_pattern": {
+        "document": "res_0603_uniroyal",
+        "pad_count": 2
+      },
+      "resistor": {
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF1003T5E": {
+      "land_pattern": {
+        "document": "res_0603_uniroyal",
+        "pad_count": 2
+      },
+      "resistor": {
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF2200T5E": {
+      "land_pattern": {
+        "document": "res_0603_uniroyal",
+        "pad_count": 2
+      },
+      "resistor": {
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF2203T5E": {
+      "land_pattern": {
+        "document": "res_0603_uniroyal",
+        "pad_count": 2
+      },
+      "resistor": {
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF5101T5E": {
+      "land_pattern": {
+        "document": "res_0603_uniroyal",
+        "pad_count": 2
+      },
+      "resistor": {
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "AO3400A": {
+      "fet": {
+        "channel": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": "n"
+        },
+        "drain_leakage_max_a": {
+          "at_vds_v": 30.0,
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 1e-06
+        },
+        "id_max_a_25c": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 5.7
+        },
+        "rds_on_ohm": {
+          "10": {
+            "basis": "direct",
+            "document": "ao3400a_aos",
+            "value": 0.0265
+          },
+          "2.5": {
+            "basis": "direct",
+            "document": "ao3400a_aos",
+            "value": 0.048
+          },
+          "4.5": {
+            "basis": "direct",
+            "document": "ao3400a_aos",
+            "value": 0.032
+          }
+        },
+        "vds_max_v": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 30.0
+        },
+        "vgs_max_v": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 12.0
+        },
+        "vgs_threshold_max_v": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 1.45
+        },
+        "vgs_threshold_min_v": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 0.65
+        }
+      },
+      "land_pattern": {
+        "document": "ao3400a_aos",
+        "pad_count": 3,
+        "pin_map": {
+          "1": "G",
+          "2": "S",
+          "3": "D"
+        }
+      }
+    },
+    "AO3401A": {
+      "fet": {
+        "channel": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": "p"
+        },
+        "drain_leakage_max_a": {
+          "at_vds_v": -30.0,
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 1e-06
+        },
+        "id_max_a_25c": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 4.0
+        },
+        "rds_on_ohm": {
+          "-10": {
+            "basis": "direct",
+            "document": "ao3401a_aos",
+            "value": 0.05
+          },
+          "-2.5": {
+            "basis": "direct",
+            "document": "ao3401a_aos",
+            "value": 0.085
+          },
+          "-4.5": {
+            "basis": "direct",
+            "document": "ao3401a_aos",
+            "value": 0.06
+          }
+        },
+        "vds_max_v": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": -30.0
+        },
+        "vgs_max_v": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 12.0
+        },
+        "vgs_threshold_max_v": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": -1.3
+        },
+        "vgs_threshold_min_v": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": -0.5
+        }
+      },
+      "land_pattern": {
+        "document": "ao3401a_aos",
+        "pad_count": 3,
+        "pin_map": {
+          "1": "G",
+          "2": "S",
+          "3": "D"
+        }
+      }
+    },
+    "CC0603KRX7R9BB104": {
+      "capacitor": {
+        "dielectric": {
+          "basis": "direct",
+          "document": "mlcc_yageo_cc0603",
+          "value": "X7R"
+        },
+        "rated_voltage_v": {
+          "basis": "direct",
+          "document": "mlcc_yageo_cc0603",
+          "value": 50.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "mlcc_yageo_cc0603",
+          "value": 0.1
+        }
+      },
+      "land_pattern": {
+        "document": "mlcc_yageo_cc0603",
+        "pad_count": 2
+      }
+    },
+    "CL10A475KO8NNNC": {
+      "capacitor": {
+        "dc_bias_loss_max": {
+          "basis": "assumed",
+          "document": "mlcc_4u7_samsung",
+          "note": "the specification publishes the DC-bias characteristic only as a graph, so no machine-readable limit exists; half the nominal capacitance is declared as the loss bound at the top of this board's VBUS range for a 16 V X5R part operated at a third of its rating",
+          "value": 0.5
+        },
+        "dielectric": {
+          "basis": "direct",
+          "document": "mlcc_4u7_samsung",
+          "value": "X5R"
+        },
+        "rated_voltage_v": {
+          "basis": "direct",
+          "document": "mlcc_4u7_samsung",
+          "value": 16.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "mlcc_4u7_samsung",
+          "value": 0.1
+        }
+      },
+      "land_pattern": {
+        "document": "mlcc_4u7_samsung",
+        "pad_count": 2
+      }
+    },
+    "CP2102N-A02-GQFN28R": {
+      "absolute_maximum": {
+        "pin_current_a": {
+          "basis": "direct",
+          "condition": "any UART, GPIO, VBUS or RSTb pin",
+          "document": "cp2102n_silabs",
+          "value": 0.1
+        },
+        "pin_voltage_above_vio_v": {
+          "basis": "direct",
+          "condition": "VIO < 3.3 V",
+          "document": "cp2102n_silabs",
+          "value": 2.5
+        },
+        "usb_data_above_vdd_v": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 0.3
+        },
+        "vdd_v": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 4.2
+        },
+        "vregin_v": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 5.8
+        }
+      },
+      "digital_inputs": {
+        "vih_below_vio_v": {
+          "basis": "direct",
+          "condition": "all GPIO pins including VBUS",
+          "document": "cp2102n_silabs",
+          "value": 0.6
+        },
+        "vil_max_v": {
+          "basis": "direct",
+          "condition": "all GPIO pins including VBUS",
+          "document": "cp2102n_silabs",
+          "value": 0.6
+        }
+      },
+      "digital_outputs": {
+        "voh_below_vio_v": {
+          "at_current_a": 0.007,
+          "basis": "direct",
+          "condition": "high drive, VIO >= 3.0 V",
+          "document": "cp2102n_silabs",
+          "value": 0.7
+        },
+        "vol_max_v": {
+          "at_current_a": 0.0135,
+          "basis": "direct",
+          "condition": "high drive, VIO >= 3.0 V",
+          "document": "cp2102n_silabs",
+          "value": 0.6
+        }
+      },
+      "input_leakage_above_vio_max_a": {
+        "basis": "direct",
+        "condition": "VIO < VIN < VIO + 2.0 V",
+        "document": "cp2102n_silabs",
+        "value": 0.00015
+      },
+      "input_leakage_max_a": {
+        "basis": "direct",
+        "condition": "GND < VIN < VIO, pull-ups off",
+        "document": "cp2102n_silabs",
+        "value": 1.1e-06
+      },
+      "land_pattern": {
+        "document": "cp2102n_silabs",
+        "exposed_pad_pin": "29",
+        "pad_count": 29
+      },
+      "pin_capacitance_f": {
+        "basis": "direct",
+        "document": "cp2102n_silabs",
+        "value": 7e-12
+      },
+      "regulator": {
+        "input_voltage_max_v": {
+          "basis": "direct",
+          "condition": "recommended operating, VREGIN",
+          "document": "cp2102n_silabs",
+          "value": 5.25
+        },
+        "output_current_max_a": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 0.1
+        },
+        "output_voltage_max_v": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 3.6
+        },
+        "output_voltage_min_v": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 3.1
+        }
+      },
+      "separate_vio_pin": {
+        "basis": "direct",
+        "document": "cp2102n_silabs",
+        "note": "table 1.1 product selection guide: the QFN28 part has no separate VIO pin, so VIO equals VDD",
+        "value": false
+      },
+      "supply": {
+        "bypass_bulk_f": {
+          "basis": "direct",
+          "condition": "required at each power pin",
+          "document": "cp2102n_silabs",
+          "value": 4.7e-06
+        },
+        "bypass_local_f": {
+          "basis": "direct",
+          "condition": "required at each power pin",
+          "document": "cp2102n_silabs",
+          "value": 1e-07
+        },
+        "reset_pull_up_ohm": {
+          "basis": "direct",
+          "condition": "recommended in all cases",
+          "document": "cp2102n_silabs",
+          "value": 1000.0
+        },
+        "suspend_pull_down_ohm": {
+          "basis": "direct",
+          "condition": "recommended where the reset-time float of SUSPENDb is undesirable",
+          "document": "cp2102n_silabs",
+          "value": 10000.0
+        },
+        "voltage_max_v": {
+          "basis": "direct",
+          "condition": "recommended operating, VDD",
+          "document": "cp2102n_silabs",
+          "value": 3.6
+        },
+        "voltage_min_v": {
+          "basis": "direct",
+          "condition": "recommended operating, VDD; USB compliance requires 3.0 V",
+          "document": "cp2102n_silabs",
+          "value": 3.0
+        }
+      },
+      "supply_current_max_a": {
+        "basis": "assumed",
+        "condition": "3 Mbaud, transmitting continuous bidirectional data",
+        "document": "cp2102n_silabs",
+        "note": "the power-consumption table states a typical of 13.7 mA and no maximum; twice the typical is declared as the bound every current claim on this board is evaluated against",
+        "value": 0.0274
+      },
+      "supply_current_typical_a": {
+        "basis": "direct",
+        "condition": "3 Mbaud, transmitting continuous bidirectional data",
+        "document": "cp2102n_silabs",
+        "value": 0.0137
+      },
+      "supply_monitor_threshold_max_v": {
+        "basis": "direct",
+        "document": "cp2102n_silabs",
+        "value": 2.15
+      },
+      "suspend_current_max_a": {
+        "basis": "assumed",
+        "document": "cp2102n_silabs",
+        "note": "the power-consumption table states a typical of 195 uA and no maximum; twice the typical is declared as the bound",
+        "value": 0.00039
+      },
+      "suspend_current_typical_a": {
+        "basis": "direct",
+        "document": "cp2102n_silabs",
+        "value": 0.000195
+      },
+      "usb": {
+        "driver_impedance_max_ohm": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 44.0
+        },
+        "driver_impedance_min_ohm": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 28.0
+        },
+        "full_speed_pull_up_ohm": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 1500.0
+        },
+        "output_fall_max_s": {
+          "basis": "direct",
+          "condition": "full speed",
+          "document": "cp2102n_silabs",
+          "value": 2e-08
+        },
+        "output_rise_min_s": {
+          "basis": "direct",
+          "condition": "full speed",
+          "document": "cp2102n_silabs",
+          "value": 4e-09
+        },
+        "pull_up_current_max_a": {
+          "basis": "direct",
+          "document": "cp2102n_silabs",
+          "value": 0.00023
+        }
+      }
+    },
+    "KH-2.54PH180-1X6P-L11.5": {
+      "connector": {
+        "current_max_a": {
+          "basis": "direct",
+          "document": "header1x6_kinghelm",
+          "value": 3.0
+        },
+        "pitch_mm": {
+          "basis": "direct",
+          "document": "header1x6_kinghelm",
+          "value": 2.54
+        },
+        "positions": {
+          "basis": "direct",
+          "document": "header1x6_kinghelm",
+          "value": 6
+        }
+      },
+      "land_pattern": {
+        "document": "header1x6_kinghelm",
+        "pad_count": 6
+      }
+    },
+    "TYPE-C-31-M-12": {
+      "connector": {
+        "current_max_a": {
+          "basis": "direct",
+          "document": "usbc_typec31m12_hro",
+          "value": 5.0
+        },
+        "durability_cycles": {
+          "basis": "direct",
+          "document": "usbc_typec31m12_hro",
+          "value": 10000
+        },
+        "positions": {
+          "basis": "direct",
+          "document": "usbc_typec31m12_hro",
+          "value": 12
+        },
+        "voltage_max_v": {
+          "basis": "direct",
+          "document": "usbc_typec31m12_hro",
+          "value": 20.0
+        }
+      },
+      "land_pattern": {
+        "document": "usbc_typec31m12_hro",
+        "note": "the drawing's own signal table names A6 DP1 and B6 DP2, and A7 DN1 and B7 DN2: the receptacle brings each data line out on two separate terminals. Sixteen contacts plus the shell make seventeen terminals; the four duplicated ground and supply contacts share four board lands, so the land pattern carries twelve signal lands and four shell holes",
+        "pad_count": 17,
+        "separate_data_terminals": true
+      }
+    },
+    "USBLC6-2SC6": {
+      "esd": {
+        "capacitance_io_gnd_max_f": {
+          "basis": "direct",
+          "condition": "VR = 1.65 V, 1 MHz",
+          "document": "usblc6_2sc6_st",
+          "value": 3.5e-12
+        },
+        "capacitance_match_typical_f": {
+          "basis": "direct",
+          "document": "usblc6_2sc6_st",
+          "value": 1.5e-14
+        },
+        "clamping_voltage_max_v": {
+          "at_current_a": 1.0,
+          "basis": "direct",
+          "condition": "IPP = 1 A, 8/20 us, any I/O pin to GND",
+          "document": "usblc6_2sc6_st",
+          "value": 12.0
+        },
+        "contact_discharge_kv": {
+          "basis": "direct",
+          "document": "usblc6_2sc6_st",
+          "note": "the features page states 8 kV contact for IEC 61000-4-2 level 4 and the absolute-ratings table states 15 kV; the lower of the two is recorded because the document contradicts itself and the design does not depend on the difference",
+          "value": 8.0
+        },
+        "leakage_max_a": {
+          "at_voltage_v": 5.25,
+          "basis": "direct",
+          "condition": "VRM = 5.25 V",
+          "document": "usblc6_2sc6_st",
+          "value": 1.5e-07
+        },
+        "rail_breakdown_min_v": {
+          "basis": "direct",
+          "condition": "IR = 1 mA, VBUS to GND",
+          "document": "usblc6_2sc6_st",
+          "value": 6.0
+        },
+        "stand_off_voltage_v": {
+          "basis": "direct",
+          "document": "usblc6_2sc6_st",
+          "value": 5.25
+        }
+      },
+      "land_pattern": {
+        "document": "usblc6_2sc6_st",
+        "note": "figure 1 functional diagram, top view: I/O1 is on pins 1 and 6, I/O2 on pins 3 and 4, GND on 2 and VBUS on 5",
+        "pad_count": 6,
+        "pin_map": {
+          "1": "I/O1",
+          "2": "GND",
+          "3": "I/O2",
+          "4": "I/O2",
+          "5": "VBUS",
+          "6": "I/O1"
+        }
+      }
+    },
+    "XC6206P332PR-G": {
+      "land_pattern": {
+        "document": "xc6206_torex",
+        "pad_count": 3,
+        "pin_map": {
+          "1": "VSS",
+          "2": "VIN",
+          "3": "VOUT"
+        }
+      },
+      "regulator": {
+        "dropout_max_v": {
+          "at_current_a": 0.1,
+          "basis": "direct",
+          "condition": "Vdif2, E-5, VOUT(T) > 1.8 V",
+          "document": "xc6206_torex",
+          "value": 0.68
+        },
+        "input_voltage_absolute_max_v": {
+          "basis": "direct",
+          "document": "xc6206_torex",
+          "value": 7.0
+        },
+        "input_voltage_max_v": {
+          "basis": "direct",
+          "condition": "recommended operating",
+          "document": "xc6206_torex",
+          "value": 6.0
+        },
+        "input_voltage_min_v": {
+          "basis": "direct",
+          "condition": "recommended operating",
+          "document": "xc6206_torex",
+          "value": 1.8
+        },
+        "load_regulation_max_v": {
+          "basis": "direct",
+          "condition": "E-3, 1 mA <= IOUT <= 100 mA",
+          "document": "xc6206_torex",
+          "value": 0.06
+        },
+        "output_current_max_a": {
+          "basis": "direct",
+          "condition": "E-2, minimum guaranteed",
+          "document": "xc6206_torex",
+          "value": 0.2
+        },
+        "output_voltage_max_v": {
+          "basis": "direct",
+          "condition": "E-1, 2 % accuracy grade, IOUT = 30 mA",
+          "document": "xc6206_torex",
+          "value": 3.366
+        },
+        "output_voltage_min_v": {
+          "basis": "direct",
+          "condition": "E-1, 2 % accuracy grade, IOUT = 30 mA",
+          "document": "xc6206_torex",
+          "value": 3.234
+        },
+        "output_voltage_v": {
+          "basis": "direct",
+          "document": "xc6206_torex",
+          "value": 3.3
+        },
+        "short_circuit_current_typical_a": {
+          "basis": "direct",
+          "condition": "E-6, VIN = VOUT + 1.5 V, VOUT = VSS",
+          "document": "xc6206_torex",
+          "value": 0.1
+        }
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "condition": "IDD, VCE = VIN",
+        "document": "xc6206_torex",
+        "value": 3e-06
+      },
+      "thermal": {
+        "operating_ambient_max_c": {
+          "basis": "direct",
+          "document": "xc6206_torex",
+          "value": 85.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "condition": "SOT-89, Ta = 25 C",
+          "document": "xc6206_torex",
+          "value": 0.5
+        },
+        "rthja_assumed_c_per_w": {
+          "basis": "assumed",
+          "document": "xc6206_torex",
+          "note": "the datasheet states a package dissipation at 25 C and publishes no derating curve or junction limit; the resistance here is the linear derating from that dissipation to zero at the storage-temperature ceiling of 125 C, which understates the permitted junction temperature and therefore the permitted dissipation",
+          "value": 200.0
+        },
+        "storage_temperature_max_c": {
+          "basis": "direct",
+          "document": "xc6206_torex",
+          "value": 125.0
+        }
+      }
+    }
+  }
+}

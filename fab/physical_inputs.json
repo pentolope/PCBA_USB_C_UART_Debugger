@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "title": "Physical stackup composed from the approved jlcpcb catalog",
+  "provenance": "jlcpcb approved catalog 953f02eab19f, source capabilities, retrieved 2026-08-25, stackup Composed 2L 1.6 mm 1 oz (composed from stated values, not a published construction)",
+  "generated_from": {
+    "fabricator": "jlcpcb",
+    "stackup": "Composed 2L 1.6 mm 1 oz",
+    "approved_normalized_sha256": "953f02eab19f914ef0017b2ebb614de43d16ebc857a424d6cce2afdc09e5da65",
+    "retrieved_utc": "2026-08-25T21:09:17.739495+00:00",
+    "sources": [
+      {
+        "id": "impedance",
+        "url": "https://jlcpcb.com/impedance",
+        "sha256_raw": "97dddf2cac68f46e176611c87ae1bf6025edc5baf310908c3744f64e987aaeea"
+      },
+      {
+        "id": "capabilities",
+        "url": "https://jlcpcb.com/capabilities/pcb-capabilities",
+        "sha256_raw": "4fd29df872d949784ad74a53adc1cce3c5891bae5eafc36c7b772d98231b28a2"
+      },
+      {
+        "id": "copper-weight",
+        "url": "https://jlcpcb.com/help/article/jlcpcb-copper-weight",
+        "sha256_raw": "dbc5a99d076dcf6c9dbbe6bb3419433fc6d510f8e1638c27e0dc7d5ed42a9a07"
+      },
+      {
+        "id": "impedance-calculator",
+        "url": "https://jlcpcb.com/help/article/user-guide-to-the-jlcpcb-impedance-calculator",
+        "sha256_raw": "ee14d6f9d8c4d0827c5a0fdad85d0bbcd9e3e7ab3ae9f2ed2ee69bbbe86f5a32"
+      },
+      {
+        "id": "thickness-options",
+        "url": "https://jlcpcb.com/resources/pcb-thickness",
+        "sha256_raw": "5b40dbadcef1bb6671075ab585985bf0ac84557ab539965c2e787dfcb759fa87"
+      }
+    ]
+  },
+  "notes": [
+    "Every value here restates the approved fabricator catalog entry named in `provenance`; none is measured from a board and none is a general-knowledge default.",
+    "Loss tangent is not published by these sources and is left null rather than assumed.",
+    "This construction is composed, not published: the fabricator publishes no two-layer construction; a two-layer board is one copper-clad laminate, so its stack follows from stated values with no unpublished choice remaining. Its dielectric thickness is the stated finished thickness less both stated copper foils."
+  ],
+  "layers": [
+    {
+      "name": "F.Cu",
+      "kind": "copper",
+      "type": "copper",
+      "thickness_mm": 0.035
+    },
+    {
+      "name": "dielectric 1",
+      "kind": "dielectric",
+      "type": "core",
+      "thickness_mm": 1.53,
+      "material": "core",
+      "epsilon_r": 4.5,
+      "loss_tangent": null
+    },
+    {
+      "name": "B.Cu",
+      "kind": "copper",
+      "type": "copper",
+      "thickness_mm": 0.035
+    }
+  ]
+}

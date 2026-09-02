@@ -1,0 +1,179 @@
+{
+  "documents": {
+    "ao3400a_aos": {
+      "applies_to": [
+        "AO3400A"
+      ],
+      "bytes": 491520,
+      "document_id": "AO3400A Rev 3, December 2011",
+      "file": "datasheets/ao3400a_aos.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "e5bfeef6cd3aa209f2e191ba42d5616259e8e7143ff01ed6c532b8ec3b13ab73",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1811081213_Alpha---Omega-Semicon-AO3400A_C20917.pdf"
+    },
+    "ao3401a_aos": {
+      "applies_to": [
+        "AO3401A"
+      ],
+      "bytes": 326568,
+      "document_id": "AO3401A Rev 3.1, December 2023",
+      "file": "datasheets/ao3401a_aos.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "0d8e3261ae280e007b5837fff60c55142f2d92af71edc4d02aee6f7a760a785c",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2412061733_Alpha---Omega-Semicon-AO3401A_C15127.pdf"
+    },
+    "cp2102n_silabs": {
+      "applies_to": [
+        "CP2102N-A02-GQFN28R"
+      ],
+      "bytes": 2252034,
+      "document_id": "Silicon Labs CP2102N Data Sheet, Rev. 1.5",
+      "file": "datasheets/cp2102n_silabs.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "32fbab0ba17f394ab76fbbd8129bddad228c1c486a1693d96ea5905936e437fe",
+      "url": "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf"
+    },
+    "header1x6_kinghelm": {
+      "applies_to": [
+        "KH-2.54PH180-1X6P-L11.5"
+      ],
+      "bytes": 223631,
+      "document_id": "Shenzhen Kinghelm KH-2.54PH180-1X6P-L11.5 drawing",
+      "file": "datasheets/header1x6_kinghelm.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "7cc2c76b894efff5f16320c2ee82004f495c19a39f3f958867cd931d013f801e",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2110191530_Shenzhen-Kinghelm-Elec-KH-2-54PH180-1X6P-L11-5_C2905486.pdf"
+    },
+    "mlcc_4u7_samsung": {
+      "applies_to": [
+        "CL10A475KO8NNNC"
+      ],
+      "bytes": 7856403,
+      "document_id": "Samsung Electro-Mechanics CL10A475KO8NNNC specification",
+      "file": "datasheets/mlcc_4u7_samsung.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Samsung-Electro-Mechanics-CL10A475KO8NNNC_C19666.pdf"
+    },
+    "mlcc_yageo_cc0603": {
+      "applies_to": [
+        "CC0603KRX7R9BB104"
+      ],
+      "bytes": 1131214,
+      "document_id": "YAGEO CC series 0603 MLCC specification",
+      "file": "datasheets/mlcc_yageo_cc0603.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "61a606825ab314ea318cfb5362848a62fdffb851efa9818d642e9a541c56a648",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2211101700_YAGEO-CC0603KRX7R9BB104_C14663.pdf"
+    },
+    "res_0603_uniroyal": {
+      "applies_to": [
+        "0603WAF4700T5E",
+        "0603WAF1001T5E",
+        "0603WAF5101T5E",
+        "0603WAF1002T5E",
+        "0603WAF1003T5E",
+        "0603WAF2203T5E"
+      ],
+      "bytes": 467557,
+      "document_id": "Uniroyal 0603W chip resistor series specification",
+      "file": "datasheets/res_0603_uniroyal.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206010045_UNI-ROYAL-Uniroyal-Elec-0603WAF1003T5E_C25803.pdf"
+    },
+    "usb_20": {
+      "applies_to": [
+        "USB 2.0 full-speed device",
+        "VBUS limits",
+        "unit loads",
+        "inrush",
+        "differential impedance"
+      ],
+      "bytes": 5983789,
+      "document_id": "Universal Serial Bus Specification Revision 2.0, April 27, 2000 (usb_20.pdf, from the 2025-06-03 release package)",
+      "file": "datasheets/usb_20_spec.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "d39698a33486c399124af92bd02e4f978fd9a836b5cf4e52e6e4633eb1d89f61",
+      "url": "https://www.usb.org/sites/default/files/usb_20_20250603.zip"
+    },
+    "usb_20_device_capacitance_ecn": {
+      "applies_to": [
+        "upstream-facing-port bypass capacitance"
+      ],
+      "bytes": 14057,
+      "document_id": "USB Engineering Change Notice: Device Capacitance",
+      "file": "datasheets/usb_20_device_capacitance_ecn.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "a6a8213b57001e3397e9376a287c09c882d9870ac1ef465465104321385a24d1",
+      "url": "https://www.usb.org/sites/default/files/usb_20_20250603.zip"
+    },
+    "usb_20_suspend_current_ecn": {
+      "applies_to": [
+        "suspend current limit"
+      ],
+      "bytes": 71263,
+      "document_id": "USB ECN: 2.5 mA Suspend Current for All Devices Except ICUSB",
+      "file": "datasheets/usb_20_suspend_current_ecn.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "1e3375761a72c37eebd198e48bccf528a4bd153bc56cc124e1f88c72722d5019",
+      "url": "https://www.usb.org/sites/default/files/usb_20_20250603.zip"
+    },
+    "usb_20_vbus_max_limit_ecn": {
+      "applies_to": [
+        "VBUS maximum supplied voltage"
+      ],
+      "bytes": 49944,
+      "document_id": "USB 2.0 ECN: VBUS Max Limit",
+      "file": "datasheets/usb_20_vbus_max_limit_ecn.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "9ea1f49b46f295e71e175d950ffaebd9edfd82f831787c40e74c2486d7773767",
+      "url": "https://www.usb.org/sites/default/files/usb_20_20250603.zip"
+    },
+    "usb_type_c": {
+      "applies_to": [
+        "sink CC termination"
+      ],
+      "bytes": 15750907,
+      "document_id": "USB Type-C Cable and Connector Specification, Release 2.5, March 2026",
+      "file": "datasheets/usb_type_c_spec.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "6636cd61387a2f78b0fa96c8ea86ccc0f39ec59f98821cdb57b206d31445a328",
+      "url": "https://www.usb.org/sites/default/files/USB%20Type-C%202.5%20Release%20202603.zip"
+    },
+    "usbc_typec31m12_hro": {
+      "applies_to": [
+        "TYPE-C-31-M-12"
+      ],
+      "bytes": 118176,
+      "document_id": "HRO Electronics TYPE-C-31-M-12 drawing, rev A, 2020-12-08",
+      "file": "datasheets/usbc_typec31m12_hro.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "6ae33d50ac47820114661138dc4e4659f40fdc5d4f485b46685dfec338da1a9e",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2205251630_Korean-Hroparts-Elec-TYPE-C-31-M-12_C165948.pdf"
+    },
+    "usblc6_2sc6_st": {
+      "applies_to": [
+        "USBLC6-2SC6"
+      ],
+      "bytes": 224255,
+      "document_id": "STMicroelectronics USBLC6-2, Doc ID 11265 Rev 5, October 2011",
+      "file": "datasheets/usblc6_2sc6_st.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "8ba7ab4ec1781b7f6052f5999a2304bd611c0ed2b5e8f36ffa5092552932a42e",
+      "url": "https://www.st.com/resource/en/datasheet/usblc6-2sc6.pdf"
+    },
+    "xc6206_torex": {
+      "applies_to": [
+        "XC6206P332PR-G"
+      ],
+      "bytes": 1049127,
+      "document_id": "Torex XC6206 Series, ETR0305_004b",
+      "file": "datasheets/xc6206_torex.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "8fda1e40ea3e7c17178353aceba9c9a9794e56a1960d02b105c576429ce418ed",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Torex-Semicon-XC6206P332MR-G_C5446.pdf"
+    }
+  },
+  "schema_version": 1
+}

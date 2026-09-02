@@ -2328,6 +2328,49 @@
             "detail": "model applies to this scope",
             "status": "applicable"
           },
+          "assumptions": [
+            "the other line's orientation link, crossing on the back layer, which the receptacle's land order forces",
+            "the suppressor's own rail conductor, which its package puts between the two protected paths",
+            "the conductor's own layer change, whose barrel takes the plane out from under the copper that lands on it",
+            "one strip of plane beside each of those, where what is left of the plane comes out narrower than the fabricator will etch and so is not poured at all",
+            "the orientation link itself, which runs on the plane layer under the receptacle's launch with no front area wide enough to pour above it",
+            "the plane under the pair is closed to every other conductor, so nothing a router does adds to this list"
+          ],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "usbc_typec31m12_hro"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 5.0
+        },
+        "requirement": null,
+        "scope": {
+          "identity": "USB_DP/USB_DM",
+          "level": "group"
+        },
+        "significance": "signal_integrity",
+        "units": "interruptions"
+      },
+      "id": "the_reference_under_the_pair_is_interrupted_only_by_these",
+      "identity": "USB_DP/USB_DM",
+      "verdict": null
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
           "assumptions": [],
           "evidence_class": "assumed-behavioral",
           "omitted_contributions": [],
@@ -3328,7 +3371,7 @@
   ],
   "summary": {
     "PASS": 59,
-    "RECORDED": 4,
+    "RECORDED": 5,
     "UNKNOWN": 2
   }
 }

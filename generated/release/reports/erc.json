@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.kicad.org/erc.v1.json",
+  "coordinate_units": "mm",
+  "date": "2026-09-02T15:06:09",
+  "ignored_checks": [],
+  "included_severities": [
+    "error",
+    "warning",
+    "exclusion"
+  ],
+  "kicad_version": "10.0.5",
+  "sheets": [
+    {
+      "path": "/",
+      "uuid_path": "/eebdd7f5-0645-5753-992c-0470999e59c3",
+      "violations": []
+    }
+  ],
+  "source": "usb_c_uart_debugger.kicad_sch",
+  "source_sha256": "76f83ada6e217ec147cb02401ab5d542af47b142c45c59e83264b834ed7c3f9e",
+  "source_closure_sha256": "eebd698213ac411bea3a517754195e530670039de902105ed3a6e6dbaa46b95a"
+}

@@ -1,3 +1,4 @@
 (fp_lib_table
 	(version 7)
+	(lib (name "UsbCUartDebugger")(type "KiCad")(uri "${KIPRJMOD}/library/UsbCUartDebugger.pretty")(options "")(descr ""))
 )

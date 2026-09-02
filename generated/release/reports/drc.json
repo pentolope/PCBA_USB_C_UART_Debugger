@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.kicad.org/drc.v1.json",
+  "coordinate_units": "mm",
+  "date": "2026-09-02T15:06:10",
+  "ignored_checks": [],
+  "included_severities": [
+    "error",
+    "warning",
+    "exclusion"
+  ],
+  "kicad_version": "10.0.5",
+  "schematic_parity": [],
+  "source": "usb_c_uart_debugger.kicad_pcb",
+  "unconnected_items": [],
+  "violations": [],
+  "source_sha256": "1f71a5bc5de78bfac6b0b6622de11c253acc6bf5a9efbd2fecb841130551d824",
+  "source_closure_sha256": "eebd698213ac411bea3a517754195e530670039de902105ed3a6e6dbaa46b95a"
+}

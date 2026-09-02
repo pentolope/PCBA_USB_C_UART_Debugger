@@ -178,7 +178,7 @@ def _parts():
     parts = {
         "U1": _part(
             "Interface_USB:CP2102N-Axx-xQFN28",
-            "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm",
+            "%s:QFN-28-1EP_5x5mm_P0.5mm_CP2102N" % LIBRARY_NAME,
             "CP2102N-A02-GQFN28R", "CP2102N-A02-GQFN28R",
             "Silicon Labs", "C964632"),
         "U2": _part(
@@ -335,6 +335,34 @@ USB_PAIR_TRACE_WIDTH_MM = 0.25
 USB_PAIR_GAP_MM = 0.25
 USB_PAIR_LENGTH_BUDGET_MM = 25.0
 USB_PAIR_SKEW_BUDGET_MM = 0.2
+
+#: How long a millimetre of the pair takes, on the stackup this board
+#: selected. It is here so a length budget and a delay budget cannot say
+#: different things; the figure itself comes from the same Hammerstad model
+#: the requirement report and the interconnect gates use, evaluated over the
+#: selected stackup and the pair's own conductor width.
+USB_PAIR_DELAY_PS_PER_MM = 5.797
+
+#: What the reference under each conductor is allowed to be missing, item
+#: by item. Every entry is something the design source itself puts there and
+#: could not have left out; nothing on this list is a tolerance. The
+#: millimetres are not stated here because they are not an electrical
+#: choice: ``design.layout.unreferenced_budgets_mm`` prices this list from
+#: the board's own conductor width, via diameter, clearance and minimum
+#: pour width, and the manifest carries what it computes.
+USB_PAIR_REFERENCE_INTERRUPTIONS = (
+    "the other line's orientation link, crossing on the back layer, which "
+    "the receptacle's land order forces",
+    "the suppressor's own rail conductor, which its package puts between "
+    "the two protected paths",
+    "the conductor's own layer change, whose barrel takes the plane out "
+    "from under the copper that lands on it",
+    "one strip of plane beside each of those, where what is left of the "
+    "plane comes out narrower than the fabricator will etch and so is not "
+    "poured at all",
+    "the orientation link itself, which runs on the plane layer under the "
+    "receptacle's launch with no front area wide enough to pour above it",
+)
 
 #: One layer change per conductor. It is not a preference: the receptacle's
 #: four data terminals alternate along the land row, so the two links that

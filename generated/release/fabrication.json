@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "board_id": "usb_c_uart_debugger",
+  "constraint_version": "layout-stage-2026-09-02",
+  "release_profile": "jlcpcb-2layer-assembled",
+  "generated_utc": "2026-09-02T21:06:12.261585+00:00",
+  "source_closure_sha256": "eebd698213ac411bea3a517754195e530670039de902105ed3a6e6dbaa46b95a",
+  "source_closure_files": 15,
+  "tools": {
+    "kicad": "10.0.5",
+    "kicad_cli": "kicad-cli"
+  },
+  "toolkit": {
+    "commit": "3516aa6fceecbcb8bcd5147ac4b6fabe5524512e",
+    "working_tree_dirty": false,
+    "detail": "git HEAD of the toolkit checkout that executed this validation"
+  },
+  "commands": [
+    "kicad-cli sch erc --output erc.json --format json --severity-all --severity-exclusions --exit-code-violations usb_c_uart_debugger.kicad_sch",
+    "kicad-cli pcb drc --output drc.json --format json --severity-all --severity-exclusions --all-track-errors --schematic-parity --refill-zones --save-board --exit-code-violations usb_c_uart_debugger.kicad_pcb",
+    "kicad-cli pcb export gerbers --output export --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask usb_c_uart_debugger.kicad_pcb",
+    "kicad-cli pcb export drill --output export --format excellon --excellon-separate-th --drill-origin plot usb_c_uart_debugger.kicad_pcb",
+    "kicad-cli pcb export pos --output cpl.csv --format csv --units mm --side both --exclude-dnp usb_c_uart_debugger.kicad_pcb",
+    "kicad-cli sch export bom --output bom.csv --fields ${QUANTITY},Reference,Value,Footprint,LCSC --labels Quantity,Designator,Comment,Footprint,LCSC Part # --group-by Value,Footprint,LCSC --exclude-dnp --ref-range-delimiter  usb_c_uart_debugger.kicad_sch",
+    "zip usb_c_uart_debugger-fabrication.zip"
+  ],
+  "artifacts": {
+    "bom.csv": "d5dc97cd6ea80afc2efaab0804ae07b2e08101e72c40839b17b84c29c3e71921",
+    "cpl.csv": "c4332d6d76570f0e777eb51b0688ce84aafed8bdae2b38f9c0380a59307f9f11",
+    "gerbers/usb_c_uart_debugger-B_Cu.gbr": "aaa51e5bb83999fa536513245c8e75c31d2410b24b5b3584cb61741b0429f8cf",
+    "gerbers/usb_c_uart_debugger-B_Mask.gbr": "125183b8eb454c8a0cc3225c9d9575ba4dffde2d19e5ab69c6c7dff0c6b5011b",
+    "gerbers/usb_c_uart_debugger-B_Silkscreen.gbr": "6b5890c3a8cbcca15a8b81173c7cf819c0ac0a865c90bc2ce74cc3838f2f878e",
+    "gerbers/usb_c_uart_debugger-Edge_Cuts.gbr": "142e22bc16e95d66da88f3451f00663d9df4bba903a20df6c361d06932bffdd0",
+    "gerbers/usb_c_uart_debugger-F_Cu.gbr": "a5a9bc0bdc17b9eba0a655175ed54970536ac342172c8b3f850f088f49221e34",
+    "gerbers/usb_c_uart_debugger-F_Mask.gbr": "253c59ba6e1aa74d2b50fd2025b093754d2ad0b882d759d756e18b02fbb70a47",
+    "gerbers/usb_c_uart_debugger-F_Paste.gbr": "6fefc9fd78c28f68a9028dffaa2943cfede11011edccb104d6e53b5a2b7efda7",
+    "gerbers/usb_c_uart_debugger-F_Silkscreen.gbr": "eb8e5267f7de82d5b5ca405cc14f63683d0294abeacfa9c2879cef18deeb81d7",
+    "gerbers/usb_c_uart_debugger-NPTH.drl": "358893c8f867f436a28e05c7f0256224235ea206a5b2df55d856e4158726f9e9",
+    "gerbers/usb_c_uart_debugger-PTH.drl": "df101330b87333739ee85a9314c3922b0929d221c8af581ca1464aae22e79ed0",
+    "gerbers/usb_c_uart_debugger-job.gbrjob": "d26641a36f5d217d660bd04262f412e6ca31d5b29fb16fb6fc9929bbe45bb08f",
+    "reports/drc.json": "d4131aa1d5d6a4f113b88992353a6bb4306db18d30a0b8c087d6b15e5de404e8",
+    "reports/erc.json": "853bde4e1bc2669baa96896c00bf00e4d16dfc2cac6c3625ad77e29725c6f8cb",
+    "usb_c_uart_debugger-fabrication.zip": "46e726917563b502f1b096f533c4171a8f0ca3dea181bbd62bc7ba04a45ba763"
+  },
+  "excluded_layers": []
+}

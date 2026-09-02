@@ -879,6 +879,23 @@ def evaluate_usb_pair_topology(parameters):
                 "both conductors take the same budget, so the two are "
                 "symmetric",)),
     })
+
+    # What the plane under the pair is allowed to be missing. Descriptive:
+    # the millimetres are a layout figure and the manifest carries them, but
+    # what the list contains is a decision made here, and a list that grows
+    # is a design change rather than a tolerance being relaxed.
+    results.append({
+        "id": "the_reference_under_the_pair_is_interrupted_only_by_these",
+        "identity": "USB_DP/USB_DM",
+        "measured_c": float(len(netlist.USB_PAIR_REFERENCE_INTERRUPTIONS)),
+        "claim": _claim(
+            "USB_DP/USB_DM", "interruptions", "signal_integrity",
+            float(len(netlist.USB_PAIR_REFERENCE_INTERRUPTIONS)), DERIVED,
+            ("usbc_typec31m12_hro",), None, scope_level="group",
+            assumptions=netlist.USB_PAIR_REFERENCE_INTERRUPTIONS + (
+                "the plane under the pair is closed to every other "
+                "conductor, so nothing a router does adds to this list",)),
+    })
     return results
 
 

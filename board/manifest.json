@@ -1,0 +1,693 @@
+{
+  "archive": {
+    "allow": [
+      {
+        "file_function": "Copper,L1,Top",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Copper,L2,Bot",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Soldermask,Top",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Soldermask,Bot",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Legend,Top",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Legend,Bot",
+        "min_count": 1,
+        "require_payload": false
+      },
+      {
+        "file_function": "Paste,Top",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Profile,NP",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Drill/plated",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Drill/nonplated",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "JobFile",
+        "min_count": 1,
+        "require_payload": true
+      }
+    ],
+    "zip": "generated/release/usb_c_uart_debugger-fabrication.zip"
+  },
+  "artifacts": {
+    "bom": "generated/release/bom.csv",
+    "cpl": "generated/release/cpl.csv",
+    "cpl_fields": {
+      "designator": "Ref",
+      "rotation": "Rot",
+      "side": "Side",
+      "x": "PosX",
+      "y": "PosY"
+    },
+    "cpl_origin": {
+      "frame": "absolute page origin",
+      "offset_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    "fabrication_manifest": "generated/release/fabrication.json",
+    "gerber_dir": "generated/release/gerbers",
+    "gerber_export_flags": [
+      "--layers",
+      "F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts",
+      "--no-protel-ext",
+      "--use-drill-file-origin",
+      "--subtract-soldermask"
+    ],
+    "position_tolerance_mm": 0.01,
+    "reports_dir": "generated/release/reports",
+    "validation_report": "generated/release/validation.json"
+  },
+  "assembly": {
+    "bom_fields": {
+      "LCSC": "LCSC Part #",
+      "designators": "Designator",
+      "footprint": "Footprint",
+      "quantity": "Quantity",
+      "value": "Comment"
+    },
+    "compared_part_fields": [
+      "LCSC",
+      "MPN",
+      "Manufacturer"
+    ],
+    "required_part_fields": [
+      "LCSC"
+    ],
+    "schematic_export": {
+      "dnp_label": "DNP",
+      "exclude_label": "ExcludeFromBOM",
+      "fields": [
+        "Reference",
+        "Value",
+        "Footprint",
+        "${DNP}",
+        "${EXCLUDE_FROM_BOM}",
+        "LCSC",
+        "MPN",
+        "Manufacturer"
+      ],
+      "flags": [],
+      "footprint_label": "Footprint",
+      "labels": [
+        "Reference",
+        "Value",
+        "Footprint",
+        "DNP",
+        "ExcludeFromBOM",
+        "LCSC",
+        "MPN",
+        "Manufacturer"
+      ],
+      "reference_label": "Reference",
+      "true_tokens": [
+        "1",
+        "true",
+        "yes",
+        "x",
+        "dnp"
+      ],
+      "value_label": "Value"
+    },
+    "schematic_fields": [
+      "LCSC",
+      "MPN",
+      "Manufacturer"
+    ]
+  },
+  "board_id": "usb_c_uart_debugger",
+  "board_origin_mm": [
+    0.0,
+    0.0
+  ],
+  "checks": {
+    "drc": {
+      "constraint_floor": {
+        "net_classes": {
+          "Default": {
+            "clearance": 0.15,
+            "track_width": 0.25,
+            "via_diameter": 0.6,
+            "via_drill": 0.3
+          },
+          "USB": {
+            "clearance": 0.15,
+            "diff_pair_gap": 0.25,
+            "diff_pair_width": 0.25,
+            "track_width": 0.25,
+            "via_diameter": 0.6,
+            "via_drill": 0.3
+          }
+        },
+        "rules": {
+          "min_clearance": 0.15,
+          "min_copper_edge_clearance": 0.3,
+          "min_hole_clearance": 0.25,
+          "min_hole_to_hole": 0.25,
+          "min_through_hole_diameter": 0.25,
+          "min_track_width": 0.15,
+          "min_via_annular_width": 0.1,
+          "min_via_diameter": 0.45
+        }
+      },
+      "extra_flags": [],
+      "forbidden_severities": [
+        "ignore"
+      ],
+      "permitted_ignored_rules": []
+    },
+    "erc": {
+      "extra_flags": []
+    }
+  },
+  "connector_contracts": [
+    {
+      "id": "usb_receptacle",
+      "pin_map": {
+        "A1": "GND",
+        "A12": "GND",
+        "A4": "VBUS",
+        "A5": "USB_CC1",
+        "A6": "USB_DP",
+        "A7": "USB_DM",
+        "A9": "VBUS",
+        "B1": "GND",
+        "B12": "GND",
+        "B4": "VBUS",
+        "B5": "USB_CC2",
+        "B6": "USB_DP",
+        "B7": "USB_DM",
+        "B9": "VBUS",
+        "SH": "GND"
+      },
+      "population": {
+        "dnp": false,
+        "exclude_from_bom": false
+      },
+      "reference": "J1",
+      "required_positions": 17,
+      "required_side": "front"
+    },
+    {
+      "id": "target_header",
+      "pin_map": {
+        "1": "GND",
+        "2": "TGT_CTS",
+        "3": "TGT_3V3",
+        "4": "TGT_TXD",
+        "5": "TGT_RXD",
+        "6": "TGT_RTS"
+      },
+      "population": {
+        "dnp": false,
+        "exclude_from_bom": false
+      },
+      "reference": "J2",
+      "required_pitch_mm": 2.54,
+      "required_positions": 6,
+      "required_rows": 1,
+      "required_side": "front"
+    }
+  ],
+  "connector_gender_tokens": {
+    "plug": [
+      "plug",
+      "header",
+      "male"
+    ],
+    "receptacle": [
+      "receptacle",
+      "socket",
+      "female"
+    ]
+  },
+  "constraint_version": "layout-stage-2026-09-02",
+  "documentation_globs": [
+    "BRIEF.md"
+  ],
+  "fixture": {
+    "attributes_file": ".gitattributes"
+  },
+  "geometry_profile": {
+    "tolerances": {
+      "clearance_match_mm": {
+        "units": "mm",
+        "value": 0.01
+      },
+      "contact_mm": {
+        "units": "mm",
+        "value": 1e-06
+      },
+      "coordinate_match_mm": {
+        "units": "mm",
+        "value": 0.002
+      },
+      "dimension_match_mm": {
+        "units": "mm",
+        "value": 0.002
+      },
+      "layer_symmetric_difference_mm2": {
+        "units": "mm2",
+        "value": 0.05
+      },
+      "polygon_chord_error_mm": {
+        "units": "mm",
+        "value": 0.001
+      },
+      "rotation_match_deg": {
+        "units": "deg",
+        "value": 0.1
+      },
+      "waiver_location_mm": {
+        "units": "mm",
+        "value": 0.001
+      }
+    },
+    "version": "geom-1"
+  },
+  "net_topology": {
+    "rules": [
+      {
+        "id": "USB_DATA_PAIR",
+        "load_pad_regex": "^U1\\.[45]$",
+        "max_vias_per_net": 2,
+        "net_regex": "^USB_D[PM]$",
+        "permitted_layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "source_pad_regex": "^J1\\.A[67]$"
+      }
+    ]
+  },
+  "placement_rules": [
+    {
+      "count": 2,
+      "id": "CONNECTORS",
+      "reference_regex": "^J[12]$"
+    },
+    {
+      "count": 5,
+      "id": "PROBES",
+      "reference_regex": "^TP[1-5]$"
+    },
+    {
+      "count": 3,
+      "id": "SUPPLY_SWITCH",
+      "reference_regex": "^Q[123]$"
+    },
+    {
+      "count": 4,
+      "id": "SIGNAL_SERIES",
+      "reference_regex": "^R(8|9|10|11)$"
+    },
+    {
+      "count": 4,
+      "id": "BRIDGE_BYPASS",
+      "reference_regex": "^C[5-8]$"
+    },
+    {
+      "count": 3,
+      "id": "RAIL_BULK",
+      "reference_regex": "^C(9|10|11)$"
+    }
+  ],
+  "project_root": "..",
+  "release_generation": {
+    "archive": {
+      "zip": "usb_c_uart_debugger-fabrication.zip"
+    },
+    "bom": {
+      "field_map": {
+        "LCSC": "LCSC Part #",
+        "designators": "Designator",
+        "footprint": "Footprint",
+        "quantity": "Quantity",
+        "value": "Comment"
+      },
+      "fields": [
+        "${QUANTITY}",
+        "Reference",
+        "Value",
+        "Footprint",
+        "LCSC"
+      ],
+      "flags": [
+        "--exclude-dnp",
+        "--ref-range-delimiter",
+        ""
+      ],
+      "group_by": [
+        "Value",
+        "Footprint",
+        "LCSC"
+      ],
+      "labels": [
+        "Quantity",
+        "Designator",
+        "Comment",
+        "Footprint",
+        "LCSC Part #"
+      ],
+      "output": "bom.csv"
+    },
+    "cpl": {
+      "field_map": {
+        "designator": "Ref",
+        "rotation": "Rot",
+        "side": "Side",
+        "x": "PosX",
+        "y": "PosY"
+      },
+      "flags": [
+        "--format",
+        "csv",
+        "--units",
+        "mm",
+        "--side",
+        "both",
+        "--exclude-dnp"
+      ],
+      "origin": {
+        "frame": "absolute page origin",
+        "offset_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      "output": "cpl.csv"
+    },
+    "drc": {
+      "output": "drc.json"
+    },
+    "drill": {
+      "flags": [
+        "--format",
+        "excellon",
+        "--excellon-separate-th",
+        "--drill-origin",
+        "plot"
+      ]
+    },
+    "erc": {
+      "output": "erc.json"
+    },
+    "lock_file_globs": [
+      "*.lck",
+      "~*.lck",
+      ".#*",
+      "*-lock",
+      "*.kicad_prl-lock"
+    ]
+  },
+  "release_profile": {
+    "id": "jlcpcb-2layer-assembled",
+    "mandatory_gates": [
+      "ARCH.CONTENTS",
+      "ARCH.PROVENANCE",
+      "BOM.NATIVE_PARITY",
+      "CONTRACT.CONNECTOR",
+      "CONTRACT.PLACEMENT",
+      "CPL.NATIVE_PARITY",
+      "DRC.AUTHORITATIVE",
+      "DRC.CONSTRAINT_FLOOR",
+      "DRC.NO_SUPPRESSED_RULES",
+      "ERC.AUTHORITATIVE",
+      "NET.TOPOLOGY",
+      "PROV.REPORT_FRESHNESS",
+      "PROV.TIMING_MODELS",
+      "ROUTE.GEOMETRY_HYGIENE",
+      "ROUTE.PROVENANCE",
+      "ROUTE.TINY_SEGMENTS",
+      "SIM.SCENARIOS",
+      "SIM.STAGE_COVERAGE",
+      "STACK.GERBER_PARITY",
+      "STACK.NATIVE_VS_MANIFEST",
+      "STACK.PHYSICAL",
+      "TIMING.INTERCONNECT_DELAY",
+      "TIMING.INTERCONNECT_SKEW",
+      "TIMING.PATH_INTEGRITY",
+      "VIA.ANNULUS_MASK_OVERLAP",
+      "VIA.IN_PAD_CONTACT",
+      "VIA.MASK_CLEARANCE_TARGET"
+    ],
+    "required_evidence": [
+      "evidence/index.json",
+      "fab/physical_inputs.json",
+      "fab/selection.json",
+      "generated/requirements.json",
+      "generated/routing.json"
+    ]
+  },
+  "reports": {
+    "closure_field": "source_closure_sha256",
+    "date_field": "date",
+    "files": [
+      "generated/release/reports/erc.json",
+      "generated/release/reports/drc.json"
+    ],
+    "require_source_hash": true,
+    "source_closure": [
+      "*.kicad_sch",
+      "*.kicad_pcb",
+      "*.kicad_pro",
+      "*.kicad_dru",
+      "constraints/*.json",
+      "sim/*.json",
+      "fab/*.json",
+      "components/*.json",
+      "evidence/index.json"
+    ],
+    "source_field": "source",
+    "source_hash_field": "source_sha256",
+    "tolerance_seconds": 0
+  },
+  "routing": {
+    "acceptance_gates": [
+      "ERC.AUTHORITATIVE",
+      "DRC.AUTHORITATIVE",
+      "DRC.NO_SUPPRESSED_RULES",
+      "DRC.CONSTRAINT_FLOOR",
+      "NET.TOPOLOGY",
+      "ROUTE.GEOMETRY_HYGIENE",
+      "ROUTE.TINY_SEGMENTS",
+      "ROUTE.PROVENANCE",
+      "CONTRACT.PLACEMENT",
+      "CONTRACT.CONNECTOR",
+      "STACK.NATIVE_VS_MANIFEST",
+      "STACK.PHYSICAL",
+      "TIMING.PATH_INTEGRITY",
+      "TIMING.INTERCONNECT_DELAY",
+      "TIMING.INTERCONNECT_SKEW",
+      "VIA.ANNULUS_MASK_OVERLAP",
+      "VIA.IN_PAD_CONTACT",
+      "SIM.SCENARIOS",
+      "SIM.STAGE_COVERAGE"
+    ],
+    "hygiene": {
+      "forbid_dangling": true,
+      "forbid_duplicate_geometry": true,
+      "forbid_net_crossings": true
+    },
+    "min_segment_mm": 0.1,
+    "provenance": "generated/routing.json",
+    "short_segment_justification": {
+      "allow_pad_or_via_entry": true
+    }
+  },
+  "schema_version": 2,
+  "simulation": {
+    "required_stages": [
+      "pre_layout"
+    ],
+    "stages": {
+      "pre_layout": [
+        "sim/pre_layout_hot_plug.json",
+        "sim/pre_layout_loopback.json",
+        "sim/pre_layout_switch_off_state.json",
+        "sim/pre_layout_target_edge.json"
+      ]
+    }
+  },
+  "sources": {
+    "pcb": "usb_c_uart_debugger.kicad_pcb",
+    "project": "usb_c_uart_debugger.kicad_pro",
+    "schematic": "usb_c_uart_debugger.kicad_sch"
+  },
+  "stackup": {
+    "expected": [
+      {
+        "plane_net": "GND",
+        "role": "plane"
+      },
+      {
+        "plane_net": "GND",
+        "role": "plane"
+      }
+    ]
+  },
+  "timing": {
+    "interfaces": {
+      "usb_data": {
+        "description": "the full-speed pair, receptacle to bridge, for both orientations of the plug",
+        "expected_path_count": 4,
+        "groups": {
+          "plug_a_side": {
+            "description": "the pair a plug in one orientation presents",
+            "max_length_spread_mm": 0.2,
+            "max_skew_ps": 1.1594,
+            "paths": "^usb_d[pm]_from_a[67]$"
+          },
+          "plug_b_side": {
+            "description": "the same pair with the plug turned over",
+            "max_length_spread_mm": 0.2,
+            "max_skew_ps": 1.1594,
+            "paths": "^usb_d[pm]_from_b[67]$"
+          }
+        },
+        "limits": {
+          "max_delay_ps": 144.92499999999998
+        },
+        "max_unreferenced_mm": 4.75,
+        "routes": {
+          "paths": [
+            {
+              "id": "usb_dm_from_a7",
+              "steps": [
+                {
+                  "from": "^J1\\.A7$",
+                  "kind": "copper",
+                  "net": "USB_DM",
+                  "to": "^U1\\.5$"
+                }
+              ]
+            },
+            {
+              "id": "usb_dp_from_a6",
+              "steps": [
+                {
+                  "from": "^J1\\.A6$",
+                  "kind": "copper",
+                  "net": "USB_DP",
+                  "to": "^U1\\.4$"
+                }
+              ]
+            },
+            {
+              "id": "usb_dm_from_b7",
+              "steps": [
+                {
+                  "from": "^J1\\.B7$",
+                  "kind": "copper",
+                  "net": "USB_DM",
+                  "to": "^U1\\.5$"
+                }
+              ]
+            },
+            {
+              "id": "usb_dp_from_b6",
+              "steps": [
+                {
+                  "from": "^J1\\.B6$",
+                  "kind": "copper",
+                  "net": "USB_DP",
+                  "to": "^U1\\.4$"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "models": {
+      "physical_stackup": "fab/physical_inputs.json"
+    },
+    "physical_stackup": {
+      "reference_nets": [
+        "GND"
+      ],
+      "require_complete": false,
+      "supplement": "fab/physical_inputs.json"
+    },
+    "propagation": {
+      "model": "hammerstad",
+      "reference_discontinuity": [
+        {
+          "justification": "the receptacle brings each data line out on two terminals whose order along the land row is D-, D+, D-, D+, so the two links that join each line's pair of terminals are non-planar and one of them must cross the other conductor on the back layer. What interrupts the plane under a front conductor is that crossing, the suppressor's rail conductor, the conductor's own layer change and one unpourable strip between two of them - priced from this board's own track width, via diameter, clearance and minimum pour width, and nothing else: the plane under the pair is closed to every other conductor and the front pour is kept out of the pair's corridor. Each is a fraction of a millimetre against a 25 mm run whose whole length is lumped at this interface's edge rate, so carrying the model across them changes no conclusion this board draws",
+          "paths": "^usb_d",
+          "reference_layers": [
+            "B.Cu"
+          ],
+          "signal_layers": [
+            "F.Cu"
+          ],
+          "treatment": "assume_continuous",
+          "up_to_mm": 2.5999999999999996
+        },
+        {
+          "justification": "the orientation link runs on the plane layer under the receptacle's launch, where the four fan-out conductors and their clearances leave no front area wide enough to pour, so the link has no reference above it for its whole span. The budget is that span and the clearance the front copper is held off by at each end. Its return is the front copper of the launch itself; at 12 ps of transit against a 145 ps path budget, no plausible error in that transit changes a conclusion",
+          "paths": "^usb_d",
+          "reference_layers": [
+            "F.Cu"
+          ],
+          "signal_layers": [
+            "B.Cu"
+          ],
+          "treatment": "assume_continuous",
+          "up_to_mm": 2.15
+        }
+      ],
+      "via_delay_model": {
+        "justification": "the two layer changes each conductor takes are through the whole 1.6 mm board, and a transit that long is not nothing beside a pair this short",
+        "model": "geometric"
+      }
+    }
+  },
+  "tools": {
+    "kicad_cli": "kicad-cli"
+  },
+  "via_mask": {
+    "contact_semantics": "annulus_contacts counts zero-distance tangency as contact; annulus_strict_overlaps counts positive shared area only",
+    "design_target_mm": 0.15,
+    "mask_dam_rule": "contact",
+    "metric": "annulus_to_opening_mm",
+    "pad_contact": {
+      "populated_pad_attributes": [
+        "SMD"
+      ],
+      "require_paste": true
+    }
+  },
+  "waivers": []
+}

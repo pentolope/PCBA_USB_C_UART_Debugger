@@ -1,0 +1,268 @@
+{
+  "accepted_attempt": 3,
+  "adopted_sha256": "1f71a5bc5de78bfac6b0b6622de11c253acc6bf5a9efbd2fecb841130551d824",
+  "attempts": [
+    {
+      "accepted": false,
+      "attempt": 1,
+      "context": {
+        "adopted_metrics": {
+          "errors": 0,
+          "schematic_parity": 0,
+          "unconnected": 1,
+          "warnings": 0
+        },
+        "ordering": "inside_out",
+        "router_summary": {
+          "failed": 0,
+          "failed_single": [],
+          "finalize_excluded_nets": [
+            "GND"
+          ],
+          "main_loop_time_s": 0.37,
+          "min_clearance_used": 0.2625,
+          "multipoint_deficit": 0,
+          "open_single": [],
+          "pad_pairs_open": {
+            "count": 0,
+            "nets": []
+          },
+          "routed": 1,
+          "scope": "merged",
+          "terminal_restores_broken": [],
+          "vias": 30
+        }
+      },
+      "source_sha256": "64af81147683807e8582e2ad39dd9f32d68f1f45e1693c68e1d9457de7cada54",
+      "stages": [
+        {
+          "produced_by": "router",
+          "sha256": "62b03722b19d73b73a32edd3c54be928f94feb3ee64d5df85cfd0d13dd9bd5c9",
+          "stage": "routed"
+        },
+        {
+          "effects": {
+            "collapsed_tracks_removed": 11,
+            "dangling_ends_trimmed": 0,
+            "dangling_tracks_removed": 2,
+            "endpoints_snapped": 30,
+            "endpoints_snapped_to_pads": 2,
+            "fragments_absorbed": 12,
+            "narrow_tracks_widened": 0,
+            "router_vias_removed": 0,
+            "undersized_vias_restored": 0,
+            "zones_refilled": 10
+          },
+          "parameters": {
+            "snap_within_via_annulus": true,
+            "touch_tolerance_mm": 0.01
+          },
+          "produced_by": "transform",
+          "sha256": "df651b1c7af1399f0b5c74069cb5f150f286e99eafc98ee2bacd09fb28112760",
+          "stage": "tidied",
+          "transform": "snap a track end standing on a same-net via onto that via's centre; pull a track end that stopped inside a same-net pad's outline onto that pad's anchor; drop tracks the snap collapsed to a point; restore the declared width on any track and the declared size on any via the search narrowed below them; prune dangling track ends and any via the search added and left copper on only one layer of, never one the design source placed, keeping any removal only while connectivity is unchanged; refill the zones so the pours are knocked out around the copper the router added"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "attempt": 2,
+      "context": {
+        "adopted_metrics": {
+          "errors": 0,
+          "schematic_parity": 0,
+          "unconnected": 1,
+          "warnings": 0
+        },
+        "ordering": "original",
+        "router_summary": {
+          "failed": 0,
+          "failed_single": [],
+          "finalize_excluded_nets": [
+            "GND"
+          ],
+          "main_loop_time_s": 0.37,
+          "min_clearance_used": 0.2625,
+          "multipoint_deficit": 0,
+          "open_single": [],
+          "pad_pairs_open": {
+            "count": 0,
+            "nets": []
+          },
+          "routed": 1,
+          "scope": "merged",
+          "terminal_restores_broken": [],
+          "vias": 30
+        }
+      },
+      "source_sha256": "64af81147683807e8582e2ad39dd9f32d68f1f45e1693c68e1d9457de7cada54",
+      "stages": [
+        {
+          "produced_by": "router",
+          "sha256": "35675a5ae155b674b85fd15bef5c1b155a06c31c073b8c39957bb40786a94376",
+          "stage": "routed"
+        },
+        {
+          "effects": {
+            "collapsed_tracks_removed": 11,
+            "dangling_ends_trimmed": 0,
+            "dangling_tracks_removed": 2,
+            "endpoints_snapped": 30,
+            "endpoints_snapped_to_pads": 2,
+            "fragments_absorbed": 12,
+            "narrow_tracks_widened": 0,
+            "router_vias_removed": 0,
+            "undersized_vias_restored": 0,
+            "zones_refilled": 10
+          },
+          "parameters": {
+            "snap_within_via_annulus": true,
+            "touch_tolerance_mm": 0.01
+          },
+          "produced_by": "transform",
+          "sha256": "b1b89960aab8e5e20661f18e092a33d00dbe68b42b6a07e1017a662db6d8fd5b",
+          "stage": "tidied",
+          "transform": "snap a track end standing on a same-net via onto that via's centre; pull a track end that stopped inside a same-net pad's outline onto that pad's anchor; drop tracks the snap collapsed to a point; restore the declared width on any track and the declared size on any via the search narrowed below them; prune dangling track ends and any via the search added and left copper on only one layer of, never one the design source placed, keeping any removal only while connectivity is unchanged; refill the zones so the pours are knocked out around the copper the router added"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "attempt": 3,
+      "context": {
+        "adopted_metrics": {
+          "errors": 0,
+          "schematic_parity": 0,
+          "unconnected": 0,
+          "warnings": 0
+        },
+        "ordering": "mps",
+        "router_summary": {
+          "failed": 0,
+          "failed_single": [],
+          "finalize_excluded_nets": [
+            "GND"
+          ],
+          "main_loop_time_s": 0.52,
+          "min_clearance_used": 0.2625,
+          "multipoint_deficit": 0,
+          "open_single": [],
+          "pad_pairs_open": {
+            "count": 0,
+            "nets": []
+          },
+          "routed": 1,
+          "scope": "merged",
+          "terminal_restores_broken": [],
+          "vias": 29
+        }
+      },
+      "source_sha256": "64af81147683807e8582e2ad39dd9f32d68f1f45e1693c68e1d9457de7cada54",
+      "stages": [
+        {
+          "produced_by": "router",
+          "sha256": "f11d289e8a487cfc96515c70040a904997ae0c466fe081b306670327feb82671",
+          "stage": "routed"
+        },
+        {
+          "effects": {
+            "collapsed_tracks_removed": 7,
+            "dangling_ends_trimmed": 2,
+            "dangling_tracks_removed": 0,
+            "endpoints_snapped": 23,
+            "endpoints_snapped_to_pads": 1,
+            "fragments_absorbed": 11,
+            "narrow_tracks_widened": 0,
+            "router_vias_removed": 0,
+            "undersized_vias_restored": 0,
+            "zones_refilled": 10
+          },
+          "parameters": {
+            "snap_within_via_annulus": true,
+            "touch_tolerance_mm": 0.01
+          },
+          "produced_by": "transform",
+          "sha256": "1f71a5bc5de78bfac6b0b6622de11c253acc6bf5a9efbd2fecb841130551d824",
+          "stage": "tidied",
+          "transform": "snap a track end standing on a same-net via onto that via's centre; pull a track end that stopped inside a same-net pad's outline onto that pad's anchor; drop tracks the snap collapsed to a point; restore the declared width on any track and the declared size on any via the search narrowed below them; prune dangling track ends and any via the search added and left copper on only one layer of, never one the design source placed, keeping any removal only while connectivity is unchanged; refill the zones so the pours are knocked out around the copper the router added"
+        }
+      ]
+    }
+  ],
+  "context": {
+    "acceptance": "a candidate is adopted only when a fresh DRC over the adopted board reports no violation, nothing unconnected and no disagreement with the schematic",
+    "options": [
+      "--track-width",
+      "0.25",
+      "--clearance",
+      "0.3",
+      "--via-size",
+      "0.6",
+      "--via-drill",
+      "0.3",
+      "--board-edge-clearance",
+      "0.45",
+      "--hole-to-hole-clearance",
+      "0.3",
+      "--same-net-pad-clearance",
+      "0.3",
+      "--no-power-tap-neckdown",
+      "--keep-input-copper"
+    ],
+    "reproducibility": "the router is not bit-reproducible; candidates are generated until one is accepted and every attempt is recorded here",
+    "reserved_nets": [
+      "GND",
+      "USB_DP",
+      "USB_DM",
+      "USB_CC1",
+      "USB_CC2"
+    ],
+    "resolution": {
+      "origin": "vendored submodule",
+      "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools"
+    },
+    "routed_nets": [
+      "+3V3",
+      "NRST",
+      "SUSPENDB",
+      "SWITCH_GATE",
+      "SWITCH_MID",
+      "TGT_3V3",
+      "TGT_CTS",
+      "TGT_RTS",
+      "TGT_RXD",
+      "TGT_TXD",
+      "UART_CTS",
+      "UART_RTS",
+      "UART_RXD",
+      "UART_TXD",
+      "VBUS",
+      "VBUS_SENSE"
+    ],
+    "router": {
+      "git": {
+        "dirty": false,
+        "sha": "3fb9c05f182db88fe1fccfaa515bc5c466169dd4",
+        "upstream_base": null
+      },
+      "grid_router": {
+        "kind": "native-binary",
+        "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/rust_router/grid_router.so",
+        "sha256": "bac20f431312bdf6ab2e585295cb320e2b634a9f28a0c6286b6ae170a51b3cf2",
+        "version": "0.21.4"
+      },
+      "kicad_cli": "/usr/bin/kicad-cli",
+      "kicad_version": "10.0.5",
+      "kind": "krt-provenance",
+      "meaning": "the routing implementation identity for this run; a different sha, dirty state or native hash is a different router, and downstream routing-derived artifacts must go stale with it",
+      "python": {
+        "executable": "/usr/bin/python3",
+        "version": "3.12.3"
+      },
+      "source_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools",
+      "version": "0.21.5"
+    }
+  },
+  "kind": "routing-run",
+  "source_sha256": "64af81147683807e8582e2ad39dd9f32d68f1f45e1693c68e1d9457de7cada54"
+}

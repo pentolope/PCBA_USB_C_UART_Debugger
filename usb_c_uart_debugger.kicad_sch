@@ -7049,7 +7049,7 @@
 		)
 		(property
 			"Footprint"
-			"Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.25x3.25mm"
+			"UsbCUartDebugger:QFN-28-1EP_5x5mm_P0.5mm_CP2102N"
 			(at 736.6 165.1 0)
 			(hide yes)
 			(effects

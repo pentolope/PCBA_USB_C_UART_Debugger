@@ -1312,6 +1312,21 @@ def evaluate_absolute_maximum(parameters):
     return results
 
 
+def switch_off_gate_source_v(parameters):
+    """What is left across the switch's gate with its driver off.
+
+    The pull-up holds the gate at the shared source; the driver in its off
+    state pulls the other way through its drain leakage. The result is the
+    divider between the pull-up and the resistance that passes that leakage
+    from the rail, which is the same network the off-state scenario solves.
+    """
+    supply = Supply(parameters)
+    off_ohm = supply.rail_max_v / abs(
+        _spec(parameters, "Q3")["fet"]["drain_leakage_max_a"]["value"])
+    pull_up_ohm = _resistor_ohms("R6")
+    return supply.rail_max_v * pull_up_ohm / (pull_up_ohm + off_ohm)
+
+
 def evaluate_switch_control(parameters):
     """The target's supply is off unless the bridge says it is running."""
     supply = Supply(parameters)
@@ -1330,18 +1345,19 @@ def evaluate_switch_control(parameters):
     }, {
         "id": "the_switch_is_held_off_when_nothing_drives_its_gate",
         "identity": "Q1",
-        "measured_v": 0.0,
+        "measured_v": switch_off_gate_source_v(parameters),
         "claim": _claim(
-            "Q1", "V", "control_integrity", 0.0, DIRECT,
-            ("ao3401a_aos",),
+            "Q1", "V", "control_integrity",
+            switch_off_gate_source_v(parameters), DIRECT,
+            ("ao3401a_aos", "ao3400a_aos"),
             _requirement("gate_to_source_below_the_switch_threshold", "<=",
                          abs(pfet["vgs_threshold_min_v"]["value"])),
             scope_level="group",
             assumptions=(
-                "the gate pull-up ties the gate to the shared source, so "
-                "with the driver off the gate-source difference is the "
-                "pull-up's own leakage across it, which is nothing a "
-                "datasheet bounds above zero",)),
+                "the pull-up ties the gate to the shared source and the "
+                "driver in its off state pulls the other way through its "
+                "own drain leakage; what is left across the gate is that "
+                "divider, evaluated at the top of the rail's band",)),
     }, {
         "id": "the_suspend_output_is_held_low_while_the_bridge_resets",
         "identity": "SUSPENDB",

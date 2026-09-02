@@ -2529,13 +2529,14 @@
             "status": "applicable"
           },
           "assumptions": [
-            "the gate pull-up ties the gate to the shared source, so with the driver off the gate-source difference is the pull-up's own leakage across it, which is nothing a datasheet bounds above zero"
+            "the pull-up ties the gate to the shared source and the driver in its off state pulls the other way through its own drain leakage; what is left across the gate is that divider, evaluated at the top of the rail's band"
           ],
           "evidence_class": "datasheet-behavioral",
           "omitted_contributions": [],
           "phenomenon": "device_electrical",
           "provenance": {
             "documents": [
+              "ao3400a_aos",
               "ao3401a_aos"
             ],
             "source": "components/parameters.json"
@@ -2545,7 +2546,7 @@
         "knowledge": "exact",
         "knowledge_basis": null,
         "quantity": {
-          "value": 0.0
+          "value": 0.09711482977495671
         },
         "requirement": {
           "assertion": {

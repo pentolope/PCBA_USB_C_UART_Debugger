@@ -1,0 +1,117 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 5.0000000000000004e-08,
+      "stop_s": 0.0002
+    }
+  ],
+  "assumptions": {
+    "CRAIL": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "every capacitance on the logic rail as one ideal capacitor, each at the low end of its tolerance and with the declared DC-bias loss taken off, with no ESR and no ESL"
+    },
+    "CTARGET": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the largest bulk capacitance this board declares a target may present, as one ideal capacitor with no series resistance of its own; a real target's own resistance would slow the event and raise the minimum"
+    },
+    "PLUG": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the instant of connection, as an ideal switch with no contact resistance and no bounce"
+    },
+    "RREG": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the regulator's ability to respond, deliberately removed: at ten kilohms it supplies nothing over an event this short, and a regulator that did respond would only hold the rail higher"
+    },
+    "RSWITCH": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the two series transistors as their on-resistance at the 2.5 V gate drive the datasheet characterises, below the rail that actually drives them"
+    },
+    "VREG": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the regulator's output at the bottom of its accuracy band less the whole of its load regulation, as an ideal source"
+    }
+  },
+  "description": "the target's declared bulk capacitance connected to the logic rail through the closed supply switch, with the rail's own capacitance at the bottom of everything stated about it",
+  "elements": [
+    {
+      "kind": "vsource_dc",
+      "name": "VREG",
+      "nodes": [
+        "src",
+        "0"
+      ],
+      "value": 3.174
+    },
+    {
+      "kind": "resistor",
+      "name": "RREG",
+      "nodes": [
+        "src",
+        "rail"
+      ],
+      "value": 10000.0
+    },
+    {
+      "kind": "capacitor",
+      "name": "CRAIL",
+      "nodes": [
+        "rail",
+        "0"
+      ],
+      "value": 1.2960000000000001e-05
+    },
+    {
+      "kind": "resistor",
+      "name": "RSWITCH",
+      "nodes": [
+        "rail",
+        "tgt"
+      ],
+      "value": 0.17
+    },
+    {
+      "kind": "capacitor",
+      "name": "CTARGET",
+      "nodes": [
+        "tgt",
+        "sink"
+      ],
+      "value": 4.7e-06
+    },
+    {
+      "kind": "vsource_pulse",
+      "name": "PLUG",
+      "nodes": [
+        "sink",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 1e-05,
+        "fall_s": 4e-10,
+        "period_s": 0.0004,
+        "rise_s": 4e-10,
+        "v1": 3.174,
+        "v2": 0.0,
+        "width_s": 0.0002
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 2.15
+      },
+      "kind": "tran_min_voltage",
+      "name": "logic_rail_minimum",
+      "node": "rail"
+    },
+    {
+      "kind": "tran_final_voltage",
+      "name": "target_supply_final",
+      "node": "tgt"
+    }
+  ],
+  "name": "logic_rail_when_a_target_is_plugged_in_live"
+}

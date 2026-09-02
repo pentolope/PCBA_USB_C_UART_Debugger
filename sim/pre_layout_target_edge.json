@@ -1,0 +1,108 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 8.333333333333334e-11,
+      "stop_s": 1.0000000000000002e-06
+    }
+  ],
+  "assumptions": {
+    "CTGT": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the budget this board declares for the target's input and the wiring to it, as one ideal capacitance to the reference"
+    },
+    "DRIVE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the bridge's transmit output as an ideal switch between the reference and the rail at the bottom of its band, at the highest baud rate the bridge states"
+    },
+    "RDRV": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the driver's own strength as the resistance that produces its stated output high voltage at the stated source current"
+    },
+    "RSERIES": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the series element at the high end of its tolerance"
+    },
+    "RTGT": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the target's input as a leakage path only, sized from the bridge's own input-leakage limit because the target's is not a document this board holds"
+    }
+  },
+  "description": "one adapter output driving the declared target and wiring capacitance through its series element, at the highest baud rate the bridge offers",
+  "elements": [
+    {
+      "kind": "vsource_pulse",
+      "name": "DRIVE",
+      "nodes": [
+        "drv",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 1.6666666666666667e-08,
+        "fall_s": 3.3333333333333334e-13,
+        "period_s": 3.3333333333333335e-07,
+        "rise_s": 3.3333333333333334e-13,
+        "v1": 3.174,
+        "v2": 0.0,
+        "width_s": 1.6666666666666668e-07
+      }
+    },
+    {
+      "kind": "resistor",
+      "name": "RDRV",
+      "nodes": [
+        "drv",
+        "out"
+      ],
+      "value": 99.99999999999999
+    },
+    {
+      "kind": "resistor",
+      "name": "RSERIES",
+      "nodes": [
+        "out",
+        "tgt"
+      ],
+      "value": 222.2
+    },
+    {
+      "kind": "capacitor",
+      "name": "CTGT",
+      "nodes": [
+        "tgt",
+        "0"
+      ],
+      "value": 5e-11
+    },
+    {
+      "kind": "resistor",
+      "name": "RTGT",
+      "nodes": [
+        "tgt",
+        "0"
+      ],
+      "value": 3060000.0
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 2.31
+      },
+      "kind": "tran_max_voltage",
+      "name": "target_input_high",
+      "node": "tgt"
+    },
+    {
+      "assertion": {
+        "op": "<=",
+        "value": 0.99
+      },
+      "kind": "tran_min_voltage",
+      "name": "target_input_low",
+      "node": "tgt"
+    }
+  ],
+  "name": "target_side_edge_at_the_highest_baud_rate"
+}

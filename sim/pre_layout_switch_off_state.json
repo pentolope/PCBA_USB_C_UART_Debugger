@@ -1,0 +1,63 @@
+{
+  "analyses": [
+    {
+      "kind": "op"
+    }
+  ],
+  "assumptions": {
+    "RAIL": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the shared source of the two switch transistors, held at the top of the rail's band, which is the largest gate-to-source difference the pull-up has to close"
+    },
+    "RDRIVEROFF": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the driver transistor in its off state, as the resistance that passes its datasheet drain leakage from the rail"
+    },
+    "RPULLUP": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the gate pull-up at its nominal value"
+    }
+  },
+  "description": "the gate network of the target-supply switch with its driver off, which is the state the bridge holds from reset until enumeration and again in suspend",
+  "elements": [
+    {
+      "kind": "vsource_dc",
+      "name": "RAIL",
+      "nodes": [
+        "source",
+        "0"
+      ],
+      "value": 3.366
+    },
+    {
+      "kind": "resistor",
+      "name": "RPULLUP",
+      "nodes": [
+        "source",
+        "gate"
+      ],
+      "value": 100000.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RDRIVEROFF",
+      "nodes": [
+        "gate",
+        "0"
+      ],
+      "value": 3366000.0000000005
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 2.866
+      },
+      "kind": "op_voltage",
+      "name": "switch_gate_voltage",
+      "node": "gate"
+    }
+  ],
+  "name": "the_supply_switch_with_nothing_driving_its_gate"
+}

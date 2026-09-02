@@ -1,0 +1,134 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 8.333333333333334e-11,
+      "stop_s": 1.0000000000000002e-06
+    }
+  ],
+  "assumptions": {
+    "CPIN": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the receiver's own pin capacitance, with nothing for the copper because there is none yet"
+    },
+    "DRIVE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the transmit output as an ideal switch at the highest baud rate the bridge states"
+    },
+    "RDRV": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the driver's strength as the resistance that produces its stated output high voltage at the stated current"
+    },
+    "RLEAK": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the receiver's input leakage at the datasheet limit, as the resistance that sinks it to the reference"
+    },
+    "RRX": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the receive series element at the high end of its tolerance"
+    },
+    "RSHUNT": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the shunt across the header as a declared contact resistance; no shunt specification is among the frozen documents"
+    },
+    "RTX": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the transmit series element at the high end of its tolerance"
+    }
+  },
+  "description": "the transmit output driving the receive input through both series elements and a shunt across the header, which is the bring-up test with no target attached",
+  "elements": [
+    {
+      "kind": "vsource_pulse",
+      "name": "DRIVE",
+      "nodes": [
+        "drv",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 1.6666666666666667e-08,
+        "fall_s": 3.3333333333333334e-13,
+        "period_s": 3.3333333333333335e-07,
+        "rise_s": 3.3333333333333334e-13,
+        "v1": 3.174,
+        "v2": 0.0,
+        "width_s": 1.6666666666666668e-07
+      }
+    },
+    {
+      "kind": "resistor",
+      "name": "RDRV",
+      "nodes": [
+        "drv",
+        "txd"
+      ],
+      "value": 99.99999999999999
+    },
+    {
+      "kind": "resistor",
+      "name": "RTX",
+      "nodes": [
+        "txd",
+        "hdr_tx"
+      ],
+      "value": 222.2
+    },
+    {
+      "kind": "resistor",
+      "name": "RSHUNT",
+      "nodes": [
+        "hdr_tx",
+        "hdr_rx"
+      ],
+      "value": 0.05
+    },
+    {
+      "kind": "resistor",
+      "name": "RRX",
+      "nodes": [
+        "hdr_rx",
+        "rxd"
+      ],
+      "value": 222.2
+    },
+    {
+      "kind": "capacitor",
+      "name": "CPIN",
+      "nodes": [
+        "rxd",
+        "0"
+      ],
+      "value": 7e-12
+    },
+    {
+      "kind": "resistor",
+      "name": "RLEAK",
+      "nodes": [
+        "rxd",
+        "0"
+      ],
+      "value": 3060000.0
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 2.574
+      },
+      "kind": "tran_max_voltage",
+      "name": "receiver_high",
+      "node": "rxd"
+    },
+    {
+      "assertion": {
+        "op": "<=",
+        "value": 0.6
+      },
+      "kind": "tran_min_voltage",
+      "name": "receiver_low",
+      "node": "rxd"
+    }
+  ],
+  "name": "loopback_across_the_two_adjacent_header_pins"
+}

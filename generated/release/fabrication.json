@@ -3,12 +3,12 @@
   "board_id": "usb_c_uart_debugger",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-03T07:15:06.348500+00:00",
-  "source_closure_sha256": "7d4dc4bd9e725a287357eb8393a2ed09095a2d4ae741167b180c0b3196086c6b",
+  "generated_utc": "2026-09-03T07:59:05.677671+00:00",
+  "source_closure_sha256": "2b0ec78b4f819f7604beb3c8c956f3bafa91f4ddb492116ea33d9b96be930aa0",
   "source_closure_files": 15,
   "source_closure": {
-    "<configuration>": "96956639d56feb18e04ad7048680ae24348b2b60866bd17746e60ed417017227",
-    "<toolkit>": "f4d39047427f111b5c9f58b884e400c7536f05e0+clean",
+    "<configuration>": "85ef7f59bf7c04b9ff2942b950f3d3c5d285ba4387ec5a73621ee39400ff8131",
+    "<toolkit>": "b44168540c62fa7805d12de0740ea17bdae10514+clean",
     "components/jlcpcb.json": "8c68874fa4c8d57fb7a0a977e9259659a676c7778d8bce95dc43e4f5cc7c2825",
     "components/parameters.json": "1cd30e4562e797730e729561c62ed38a1093a5f1223da096383bd5ad5a833fa8",
     "evidence/index.json": "937112501d454addfa50b3e0742f03f29da888e92282263c77b11aa8849b80fb",
@@ -28,7 +28,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "f4d39047427f111b5c9f58b884e400c7536f05e0",
+    "commit": "b44168540c62fa7805d12de0740ea17bdae10514",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -44,20 +44,20 @@
   "artifacts": {
     "bom.csv": "d5dc97cd6ea80afc2efaab0804ae07b2e08101e72c40839b17b84c29c3e71921",
     "cpl.csv": "c4332d6d76570f0e777eb51b0688ce84aafed8bdae2b38f9c0380a59307f9f11",
-    "gerbers/usb_c_uart_debugger-B_Cu.gbr": "00c06d6c28e0207a41dedbed87100ac63ec21ddcbc1793211968253198ffee23",
-    "gerbers/usb_c_uart_debugger-B_Mask.gbr": "2171023f80b3127d39e6e6389a14f407f02a832dd64f98642947165806ff2c03",
-    "gerbers/usb_c_uart_debugger-B_Silkscreen.gbr": "1cf893ca8b527f6bca89e71ca40fe87cc72860b34d2cc2e349e3bc4004afe63c",
-    "gerbers/usb_c_uart_debugger-Edge_Cuts.gbr": "6d7c0d9d1126b84c61326333f95edc0f610318b1f45168a110db591d0541441a",
-    "gerbers/usb_c_uart_debugger-F_Cu.gbr": "5353fc61dcadbe1343ea2e441627853ceb3ef9beec0e5a88cce674c4c25218c2",
-    "gerbers/usb_c_uart_debugger-F_Mask.gbr": "9647dd2642f8bd2cc1cc11935551fa406e4e57e86c36acf3ad2865e1d342305d",
-    "gerbers/usb_c_uart_debugger-F_Paste.gbr": "a4749f9cce2e736f05a642ce573f96a61beff7d5bacfbc2fde926966ada33576",
-    "gerbers/usb_c_uart_debugger-F_Silkscreen.gbr": "1a8454afb76f3e080d61b55eab18d5e83b0c52c1f739ca33293ed04ba763174d",
-    "gerbers/usb_c_uart_debugger-NPTH.drl": "e76a7acce03bb7dc6ed0f81a738b676aafbf2806387c1dff746f407d815d3548",
-    "gerbers/usb_c_uart_debugger-PTH.drl": "891236a230a1fe2922941b13ea19579a324a44dec064b9c1e32327de44923de5",
-    "gerbers/usb_c_uart_debugger-job.gbrjob": "62a45af8293571c4c80f580892b3ae116b8e8396e120d9fccc6ac8b6ca791efe",
-    "reports/drc.json": "25e7308ef55d9084d682dd9956ec33bb139ee3f79787680df6dacc815208fdd9",
-    "reports/erc.json": "b3e4e750c2545c8bd8b55cc651fd3c6597dbbf9b0cb1396bd4433e2cf19161da",
-    "usb_c_uart_debugger-fabrication.zip": "f5a74124ffc24908420038d74c2ef20d7bfda31a209727c7ed44576938523b5d"
+    "gerbers/usb_c_uart_debugger-B_Cu.gbr": "cc39ba85b368de5321796e3c5f25fe1a2553234aae35080e0ea296b2621e2855",
+    "gerbers/usb_c_uart_debugger-B_Mask.gbr": "27489bd4608fd2660eec1975930ddde0756a6fad06be1ed546adc988ed3d6a6e",
+    "gerbers/usb_c_uart_debugger-B_Silkscreen.gbr": "afff40b3198bdf4a8be887f50f007e93fc390774808c069cc110868fdc275505",
+    "gerbers/usb_c_uart_debugger-Edge_Cuts.gbr": "26d6e0264a5d806ee24945f37351e408039f32d29cab4b5a950e1ceba035be8c",
+    "gerbers/usb_c_uart_debugger-F_Cu.gbr": "b06e8124b0b79adbb6f1e7b9a2bab6b6a38bfced49f308a23c02a75b34639ba8",
+    "gerbers/usb_c_uart_debugger-F_Mask.gbr": "ea7da91b275c4c28657922a298206afb61d20268f4701549ea35b65d812c2f8e",
+    "gerbers/usb_c_uart_debugger-F_Paste.gbr": "91a319e9ecfa305b1b0c96b0b4c8b5d326ddbbbe517be76105a530acb478bd0a",
+    "gerbers/usb_c_uart_debugger-F_Silkscreen.gbr": "aa0f8a96903fcaf99944f24bf7f3b3eb14bfcf474e874f65f35cc52da74028e8",
+    "gerbers/usb_c_uart_debugger-NPTH.drl": "43303624e4d63d5748aaab38578b98f86708fba9dc309665819fd7cf9e4111dd",
+    "gerbers/usb_c_uart_debugger-PTH.drl": "7f139cb6780dc3d49d806dedb25795053fc8354a9a2364a647830604e4593b02",
+    "gerbers/usb_c_uart_debugger-job.gbrjob": "80fb982d3651e251f2addecffa46a486c89dcafa65682662cd48c7ae3968c5d0",
+    "reports/drc.json": "e4d6cbd71909a1a4d42ce7e9b69de101994621b1f1dbe868202914292348d14c",
+    "reports/erc.json": "08c281cfe4914ca53de6e26fdea4fa96405bba35d2783e42df866134c98ac5c8",
+    "usb_c_uart_debugger-fabrication.zip": "43f013367749f0212b8ec22a926b1ebd9f84b8124fa2648f9a6db8b9b7199dc7"
   },
   "excluded_layers": []
 }

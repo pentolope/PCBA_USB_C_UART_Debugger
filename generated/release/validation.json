@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_utc": "2026-09-03T16:28:47.813766+00:00",
-  "source_closure_sha256": "57b1e09fac077f7c6e0ea462c780e5167f7b5f010f41ea6b5cd7d47baba4d103",
+  "generated_utc": "2026-09-03T21:11:37.026862+00:00",
+  "source_closure_sha256": "015d57fc61eeea73e6d3b16ff725b73baba96ef48b0fd38c7913a5bcc341abee",
   "manifest": {
     "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/board/manifest.json",
     "sha256": "4038acec16c79f6276896a9991ef3dea095d8b73936741f9a39ab30a89b4d430",
@@ -13,7 +13,7 @@
     "kicad_cli": "/usr/bin/kicad-cli",
     "validation_implementation": {
       "toolkit_root": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/tooling/PCBA_AutoDesignAndTest",
-      "commit": "0c051f23f5cb7c08360e7db4ab231ec321a4459c",
+      "commit": "7f51066b4095042726be2be3824c3b9ff2f5158a",
       "working_tree_dirty": false,
       "detail": "git HEAD of the toolkit checkout that executed this validation"
     },
@@ -160,7 +160,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/generated/release/usb_c_uart_debugger-fabrication.zip",
           "name": "usb_c_uart_debugger-fabrication.zip",
-          "sha256": "46499659df61fcc61686a122fd34e29a2f112b098a78a44fe1358db3df9ff92c"
+          "sha256": "ca3fb1d1c8c34d89cce3cc5303277d109eaa57aede1d5ec148122340f677698a"
         }
       ]
     },
@@ -173,8 +173,8 @@
         "fabrication_manifest": "fabrication.json",
         "artifacts_recorded": 16,
         "artifacts_present": 16,
-        "source_closure_sha256": "57b1e09fac077f7c6e0ea462c780e5167f7b5f010f41ea6b5cd7d47baba4d103",
-        "recorded_source_closure_sha256": "57b1e09fac077f7c6e0ea462c780e5167f7b5f010f41ea6b5cd7d47baba4d103"
+        "source_closure_sha256": "015d57fc61eeea73e6d3b16ff725b73baba96ef48b0fd38c7913a5bcc341abee",
+        "recorded_source_closure_sha256": "015d57fc61eeea73e6d3b16ff725b73baba96ef48b0fd38c7913a5bcc341abee"
       },
       "limits": {},
       "finding_count": 0,
@@ -183,7 +183,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/generated/release/fabrication.json",
           "name": "fabrication.json",
-          "sha256": "d88c1205a558a38d6f8c57ed74ed692914aac169fbda4c9b0ff1a880af134534"
+          "sha256": "677bb7110e0a51a3373af9306d2be7a2e5580a308cabb3fb359e482cb4292164"
         }
       ]
     },
@@ -428,10 +428,10 @@
         "rules_sha256": "4237e545b1d9c052d2d8d0c7b59830157688971505687ba6b5ae6025ecf3520a",
         "constraint_manifest_sha256": "4038acec16c79f6276896a9991ef3dea095d8b73936741f9a39ab30a89b4d430",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-03T16:28:40.865433+00:00",
+        "generated_utc": "2026-09-03T21:11:17.869354+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/drc.v1.json",
-          "date": "2026-09-03T10:28:40",
+          "date": "2026-09-03T15:11:17",
           "kicad_version": "10.0.5",
           "source": "usb_c_uart_debugger.kicad_pcb",
           "ignored_checks": [],
@@ -465,9 +465,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/out/usb_c_uart_debugger/20260903T162836Z-39eba6e9/work/drc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/out/usb_c_uart_debugger/20260903T211107Z-2717bf30/work/drc_authoritative.json",
           "name": "drc_authoritative.json",
-          "sha256": "d16a8b79a6661994d862cf77057177e9acb0b0389ac98ca16f133da14f13fd85"
+          "sha256": "ac8ebd0ebd985287f060a784dedb9665692611414bc3a9262d271b448a6a170e"
         }
       ]
     },
@@ -684,10 +684,10 @@
         "rules_sha256": "4237e545b1d9c052d2d8d0c7b59830157688971505687ba6b5ae6025ecf3520a",
         "constraint_manifest_sha256": "4038acec16c79f6276896a9991ef3dea095d8b73936741f9a39ab30a89b4d430",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-03T16:28:43.174851+00:00",
+        "generated_utc": "2026-09-03T21:11:25.836732+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/erc.v1.json",
-          "date": "2026-09-03T10:28:42",
+          "date": "2026-09-03T15:11:25",
           "kicad_version": "10.0.5",
           "source": "usb_c_uart_debugger.kicad_sch",
           "ignored_checks": [],
@@ -721,9 +721,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/out/usb_c_uart_debugger/20260903T162836Z-39eba6e9/work/erc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/out/usb_c_uart_debugger/20260903T211107Z-2717bf30/work/erc_authoritative.json",
           "name": "erc_authoritative.json",
-          "sha256": "45274c9ae9a215b68f7868d224317975520e1db851bac1d2658da1c9c604dfc8"
+          "sha256": "c325486d2baa1a13303625ffb1a94e894797bc072b0937f06e3b080e40c5eb3b"
         }
       ]
     },
@@ -812,10 +812,10 @@
       "gate": "PROV.REPORT_FRESHNESS",
       "title": "Committed reports match the current sources",
       "status": "PASS",
-      "reason": "all 2 committed report(s) bind the canonical digest of all 15 source inputs, and every one still matches",
+      "reason": "all 2 committed report(s) bind the canonical digest of all 20 source inputs, and every one still matches",
       "measurements": {
-        "source_closure_files": 15,
-        "source_closure_sha256": "57b1e09fac077f7c6e0ea462c780e5167f7b5f010f41ea6b5cd7d47baba4d103",
+        "source_closure_files": 20,
+        "source_closure_sha256": "015d57fc61eeea73e6d3b16ff725b73baba96ef48b0fd38c7913a5bcc341abee",
         "source_sha256": {
           "pcb": "1f71a5bc5de78bfa",
           "schematic": "76f83ada6e217ec1"
@@ -992,7 +992,7 @@
       "status": "PASS",
       "reason": "2 shipped copper layers match a fresh export by geometric symmetric difference (limit 0.05 mm2)",
       "measurements": {
-        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/out/usb_c_uart_debugger/20260903T162836Z-39eba6e9/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/out/usb_c_uart_debugger/20260903T162836Z-39eba6e9/work/design/usb_c_uart_debugger.kicad_pcb",
+        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/out/usb_c_uart_debugger/20260903T211107Z-2717bf30/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/05_PCBA_USB_C_UART_Debugger/out/usb_c_uart_debugger/20260903T211107Z-2717bf30/work/design/usb_c_uart_debugger.kicad_pcb",
         "fresh_export_exit": 0,
         "shipped_copper_layers": [
           "copper,l1,top",
@@ -2647,9 +2647,9 @@
       "gate": "PROV.TIMING_MODELS",
       "title": "Every timing model file is present and inside the source closure",
       "status": "PASS",
-      "reason": "all 1 declared timing model file(s) exist and are inside the 15-file source closure, alongside the manifest's configuration identity",
+      "reason": "all 1 declared timing model file(s) exist and are inside the 20-file source closure, alongside the manifest's configuration identity",
       "measurements": {
-        "source_closure_files": 15,
+        "source_closure_files": 20,
         "models": {
           "physical_stackup": "fab/physical_inputs.json"
         }
